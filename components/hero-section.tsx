@@ -99,29 +99,23 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0, 0.71, 0.2, 1.01] }}
           >
-            <div className="flex items-center">
-              <span className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 animate-gradient">
-                Ahmezz
+            <div className="relative">
+              <div className="absolute -inset-6 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-full blur-xl"></div>
+              <span className="relative text-7xl md:text-9xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 animate-gradient">
+                AHM
               </span>
-              <span className="text-5xl md:text-7xl font-extrabold ml-2 text-white">TAGG</span>
             </div>
           </motion.div>
 
-          <motion.p variants={itemVariants} className="text-lg text-gray-400 mb-4">
-            <span className="text-white font-medium">T</span>echnology <span className="text-white font-medium">A</span>
-            dvancement & <span className="text-white font-medium">G</span>rowth{" "}
-            <span className="text-white font-medium">G</span>roup
-          </motion.p>
-
           <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
-              Connecting Agencies, Amplifying Impact
+              AI-Powered Agency Collective
             </span>
           </motion.h1>
 
           <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl">
-            Ahmezz TAGG is the premier collaborative hub for specialized agencies, combining expertise to deliver
-            transformative digital solutions.
+            Uniting specialized AI workflow agencies to deliver transformative digital solutions for businesses seeking
+            innovation and growth.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">

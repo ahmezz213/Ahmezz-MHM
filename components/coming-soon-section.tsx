@@ -43,10 +43,14 @@ export default function ComingSoonSection() {
           className="text-center mb-16"
         >
           <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4">
-            Expanding Our TAGG Network
+            Expanding Our{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500 font-extrabold">
+              AHM
+            </span>{" "}
+            Network
           </motion.h2>
           <motion.p variants={itemVariants} className="text-xl text-gray-400 max-w-2xl mx-auto">
-            New specialized agencies will be joining the Ahmezz TAGG hub soon.
+            New specialized agencies will be joining our collective soon.
           </motion.p>
         </motion.div>
 

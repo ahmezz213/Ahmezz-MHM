@@ -13,14 +13,19 @@ export default function PrivacyPolicy() {
           </Button>
         </Link>
 
-        <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
+        <div className="flex items-center mb-8">
+          <h1 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500 mr-2">
+            AHM
+          </h1>
+          <h2 className="text-3xl font-bold text-white">| Privacy Policy</h2>
+        </div>
 
         <div className="prose prose-invert max-w-none text-gray-300">
           <h2 className="text-2xl font-semibold mt-8 mb-4 text-white">Your Privacy Matters to Us</h2>
           <p>
-            At Ahmezz TAGG, we're committed to protecting your privacy and ensuring your data is handled with the utmost
-            care. This Privacy Policy outlines how we collect, use, and safeguard your information when you interact
-            with our website or services.
+            At AHM, we're committed to protecting your privacy and ensuring your data is handled with the utmost care.
+            This Privacy Policy outlines how we collect, use, and safeguard your information when you interact with our
+            website or services.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4 text-white">What Information Do We Collect?</h2>

@@ -20,18 +20,11 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <motion.div whileHover={{ scale: 1.05 }} className="flex items-center">
-                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-                  Ahmezz
+                <span className="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+                  AHM
                 </span>
-                <span className="text-2xl font-extrabold ml-1 text-white">TAGG</span>
               </motion.div>
             </Link>
-            <p className="text-gray-400 mb-2">
-              <span className="text-white font-medium">T</span>echnology{" "}
-              <span className="text-white font-medium">A</span>dvancement &{" "}
-              <span className="text-white font-medium">G</span>rowth <span className="text-white font-medium">G</span>
-              roup
-            </p>
             <p className="text-gray-400 mb-6 max-w-md">
               A collaborative hub for specialized agencies in AI, marketing, and digital solutions, working together to
               deliver exceptional results.
@@ -42,7 +35,7 @@ export default function Footer() {
                 size="icon"
                 className="text-gray-400 hover:text-white border border-gray-800 hover:border-gray-700"
                 onClick={() => window.open("https://www.instagram.com/ahmezz.in?igsh=ZnNzajRldGc5NmI3", "_blank")}
-                aria-label="Ahmezz TAGG Instagram"
+                aria-label="AHM Instagram"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
@@ -52,7 +45,7 @@ export default function Footer() {
                 size="icon"
                 className="text-gray-400 hover:text-white border border-gray-800 hover:border-gray-700"
                 onClick={() => window.open("https://x.com/Toufiq674578?t=0R3aC2E3Bi8JidciwI9nQg&s=09", "_blank")}
-                aria-label="Ahmezz TAGG Twitter/X"
+                aria-label="AHM Twitter/X"
               >
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter/X</span>
@@ -142,7 +135,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Ahmezz TAGG. All rights reserved.
+            &copy; {new Date().getFullYear()} AHM. All rights reserved.
           </p>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Button

@@ -45,8 +45,9 @@ export default function WhyChooseSection() {
         >
           <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4">
             Why Choose{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">Ahmezz</span>{" "}
-            <span className="text-white">TAGG</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500 font-extrabold">
+              AHM
+            </span>
           </motion.h2>
           <motion.p variants={itemVariants} className="text-xl text-gray-400 max-w-2xl mx-auto">
             We bring together specialized expertise to deliver comprehensive solutions that drive results.

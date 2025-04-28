@@ -62,10 +62,9 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
-                Ahmezz
+              <span className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 animate-gradient">
+                AHM
               </span>
-              <span className="text-xl md:text-2xl font-extrabold ml-1 text-white">TAGG</span>
             </motion.div>
           </Link>
 
