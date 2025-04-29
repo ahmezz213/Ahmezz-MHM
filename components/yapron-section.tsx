@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Video, Palette, Monitor, Camera, Film, Award } from "lucide-react"
+import { ExternalLink, Video, Palette, Monitor, Camera, Film } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
@@ -41,7 +41,7 @@ export default function YapronSection() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
         >
           <motion.div variants={itemVariants}>
             <div className="relative">
@@ -79,17 +79,6 @@ export default function YapronSection() {
                     Content Creation
                   </span>
                   <span className="px-3 py-1 bg-green-900/30 text-green-400 rounded-full text-sm">Marketing</span>
-                </div>
-
-                <div className="mb-6 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
-                  <div className="flex items-center mb-2">
-                    <Award className="h-5 w-5 text-green-500 mr-2" />
-                    <h4 className="text-white font-medium">Award-Winning Creativity</h4>
-                  </div>
-                  <p className="text-gray-400 text-sm">
-                    Our creative team has been recognized for innovative visual storytelling and brand-building content
-                    that drives results.
-                  </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -196,6 +185,49 @@ export default function YapronSection() {
               </motion.div>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* Leadership Section */}
+        <motion.div variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8 text-white text-center">
+            Leadership
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="flex items-start">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-green-900/50 to-teal-900/50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-2xl font-bold text-white">Z</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Zaid Yapat</h3>
+                  <p className="text-green-400 mb-3">Co-founder</p>
+                  <p className="text-gray-400">
+                    Zaid brings a strong background in visual storytelling and creative direction to Yapron Visuals. His
+                    expertise in video production and content strategy helps clients effectively communicate their brand
+                    message through compelling visual media.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="flex items-start">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-green-900/50 to-teal-900/50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-2xl font-bold text-white">F</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Fatah Barron</h3>
+                  <p className="text-teal-400 mb-3">Co-founder</p>
+                  <p className="text-gray-400">
+                    Fatah specializes in visual design and brand identity development. With experience across multiple
+                    creative disciplines, he focuses on creating cohesive visual systems that align with each client's
+                    unique vision and business objectives.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

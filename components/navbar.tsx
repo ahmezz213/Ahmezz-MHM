@@ -63,7 +63,7 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <span className="text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 animate-gradient">
-                AHM
+                Ahmezz | AMZ
               </span>
             </motion.div>
           </Link>

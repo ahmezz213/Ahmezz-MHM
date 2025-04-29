@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Bot, Cpu, Zap, Clock, Code, Globe } from "lucide-react"
+import { ExternalLink, Bot, Cpu, Zap, Clock, Code, Globe, Building, Home } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
@@ -41,7 +41,7 @@ export default function MhmSection() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
         >
           <motion.div variants={itemVariants}>
             <div className="relative">
@@ -158,24 +158,142 @@ export default function MhmSection() {
                   </p>
                 </div>
               </motion.div>
-
-              <motion.div
-                className="flex items-start p-4 bg-gray-900/50 rounded-lg border border-gray-800"
-                whileHover={{ x: 10, transition: { duration: 0.2 } }}
-              >
-                <div className="h-10 w-10 rounded-full bg-green-900/30 flex items-center justify-center mr-4 flex-shrink-0">
-                  <Globe className="h-5 w-5 text-green-500" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-1 text-white">Service Delivery Excellence</h4>
-                  <p className="text-gray-400">
-                    Led by our specialist Gideon, our service delivery team ensures smooth implementation and ongoing
-                    support for all AI agent deployments.
-                  </p>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* Industry Solutions Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="mb-20"
+        >
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8 text-white text-center">
+            Industry Solutions
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-blue-900/30 flex items-center justify-center mb-4">
+                <Building className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Aesthetic & Medical Clinics</h3>
+              <p className="text-gray-400 mb-4">
+                Specialized AI agents for aesthetic and medical clinics that handle appointment scheduling, patient
+                inquiries, and follow-ups. Our solutions help clinics improve patient engagement and streamline
+                administrative tasks.
+              </p>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  Automated appointment scheduling
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  Patient inquiry management
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  Treatment information and FAQs
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-purple-900/30 flex items-center justify-center mb-4">
+                <Home className="h-6 w-6 text-purple-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Real Estate Agents</h3>
+              <p className="text-gray-400 mb-4">
+                AI solutions for real estate professionals that qualify leads, answer property questions, and schedule
+                viewings. Our agents help real estate professionals focus on closing deals rather than administrative
+                tasks.
+              </p>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  Lead qualification and nurturing
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  Property information delivery
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  Viewing scheduling automation
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-indigo-900/30 flex items-center justify-center mb-4">
+                <Globe className="h-6 w-6 text-indigo-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Remodeling & Construction</h3>
+              <p className="text-gray-400 mb-4">
+                Digital solutions for remodeling and construction businesses that handle client inquiries, project
+                updates, and scheduling. Our AI agents help streamline communication and project management.
+              </p>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-indigo-500 mr-2">•</span>
+                  Project inquiry handling
+                </li>
+                <li className="flex items-start">
+                  <span className="text-indigo-500 mr-2">•</span>
+                  Client communication automation
+                </li>
+                <li className="flex items-start">
+                  <span className="text-indigo-500 mr-2">•</span>
+                  Scheduling and project updates
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Leadership Section */}
+        <motion.div variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8 text-white text-center">
+            Leadership
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="flex items-start">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-2xl font-bold text-white">T</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Taufiq Ahmed</h3>
+                  <p className="text-blue-400 mb-3">Co-founder</p>
+                  <p className="text-gray-400">
+                    With a background in AI systems and business automation, Taufiq leads MHM's strategic direction and
+                    technology development. His expertise in AI agent architecture has been instrumental in developing
+                    MHM's core offerings.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="flex items-start">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-2xl font-bold text-white">G</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Gideon</h3>
+                  <p className="text-blue-400 mb-3">Service Delivery Specialist</p>
+                  <p className="text-gray-400">
+                    Gideon oversees the implementation and ongoing support of MHM's AI agent deployments. His methodical
+                    approach ensures clients receive solutions that align perfectly with their operational needs and
+                    business objectives.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

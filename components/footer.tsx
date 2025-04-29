@@ -21,7 +21,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4">
               <motion.div whileHover={{ scale: 1.05 }} className="flex items-center">
                 <span className="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-                  AHM
+                  AMZ
                 </span>
               </motion.div>
             </Link>
@@ -35,7 +35,7 @@ export default function Footer() {
                 size="icon"
                 className="text-gray-400 hover:text-white border border-gray-800 hover:border-gray-700"
                 onClick={() => window.open("https://www.instagram.com/ahmezz.in?igsh=ZnNzajRldGc5NmI3", "_blank")}
-                aria-label="AHM Instagram"
+                aria-label="AMZ Instagram"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
@@ -45,7 +45,7 @@ export default function Footer() {
                 size="icon"
                 className="text-gray-400 hover:text-white border border-gray-800 hover:border-gray-700"
                 onClick={() => window.open("https://x.com/Toufiq674578?t=0R3aC2E3Bi8JidciwI9nQg&s=09", "_blank")}
-                aria-label="AHM Twitter/X"
+                aria-label="AMZ Twitter/X"
               >
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter/X</span>
@@ -135,7 +135,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} AHM. All rights reserved.
+            &copy; {new Date().getFullYear()} AMZ. All rights reserved.
           </p>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Button

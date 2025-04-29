@@ -45,7 +45,7 @@ export default function ComingSoonSection() {
           <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4">
             Expanding Our{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500 font-extrabold">
-              AHM
+              AMZ
             </span>{" "}
             Network
           </motion.h2>

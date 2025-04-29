@@ -102,7 +102,7 @@ export default function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-full blur-xl"></div>
               <span className="relative text-7xl md:text-9xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 animate-gradient">
-                AHM
+                AMZ
               </span>
             </div>
           </motion.div>

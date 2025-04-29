@@ -9,11 +9,11 @@ export default function AboutSection() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               About{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500 font-extrabold">
-                AHM
+                AMZ
               </span>
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              AHM is a collaborative hub where specialized agencies come together to offer comprehensive solutions for
+              AMZ is a collaborative hub where specialized agencies come together to offer comprehensive solutions for
               businesses of all sizes.
             </p>
 
