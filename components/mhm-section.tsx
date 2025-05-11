@@ -259,7 +259,7 @@ export default function MhmSection() {
             Leadership
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
               <div className="flex items-start">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
@@ -269,9 +269,27 @@ export default function MhmSection() {
                   <h3 className="text-xl font-semibold text-white">Taufiq Ahmed</h3>
                   <p className="text-blue-400 mb-3">Co-founder</p>
                   <p className="text-gray-400">
-                    With a background in AI systems and business automation, Taufiq leads MHM's strategic direction and
-                    technology development. His expertise in AI agent architecture has been instrumental in developing
-                    MHM's core offerings.
+                    As co-founder of MHM, Taufiq focuses on sales and company representation. His primary
+                    responsibilities include client acquisition, relationship management, and representing the company
+                    in business contexts. He works closely with the service delivery team to ensure client needs are
+                    understood and communicated effectively.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="flex items-start">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-2xl font-bold text-white">H</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Hamza</h3>
+                  <p className="text-blue-400 mb-3">Co-founder</p>
+                  <p className="text-gray-400">
+                    Hamza co-founded MHM and oversees company management and outreach strategies. With a focus on
+                    operational efficiency and business development, he ensures that MHM maintains strong client
+                    relationships while expanding its market presence.
                   </p>
                 </div>
               </div>
@@ -287,8 +305,8 @@ export default function MhmSection() {
                   <p className="text-blue-400 mb-3">Service Delivery Specialist</p>
                   <p className="text-gray-400">
                     Gideon oversees the implementation and ongoing support of MHM's AI agent deployments. His methodical
-                    approach ensures clients receive solutions that align perfectly with their operational needs and
-                    business objectives.
+                    approach ensures clients receive solutions that align with their operational needs and business
+                    objectives.
                   </p>
                 </div>
               </div>
