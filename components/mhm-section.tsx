@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Bot, Cpu, Zap, Clock, Code, Globe, Building, Home } from "lucide-react"
+import { ExternalLink, Bot, Cpu, Zap, Clock, Code, Globe, Building, Home, Calendar } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
@@ -10,6 +10,10 @@ export default function MhmSection() {
     triggerOnce: true,
     threshold: 0.1,
   })
+
+  const openCalendly = () => {
+    window.open("https://calendly.com/ahmezz-amz/30min", "_blank")
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,7 +38,7 @@ export default function MhmSection() {
   }
 
   return (
-    <section id="mhm" className="py-20 md:py-32 bg-gradient-to-b from-gray-900 to-black">
+    <section id="mhm" className="py-20 md:py-32 bg-gradient-to-br from-gray-900 via-blue-900/20 to-black">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           ref={ref}
@@ -45,16 +49,16 @@ export default function MhmSection() {
         >
           <motion.div variants={itemVariants}>
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg blur-xl opacity-70"></div>
-              <div className="relative bg-gray-900 border border-gray-800 rounded-lg p-8 shadow-xl">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-2xl blur-xl opacity-70"></div>
+              <div className="relative bg-gradient-to-br from-gray-900/90 to-blue-900/30 border border-blue-500/30 rounded-2xl p-8 shadow-2xl backdrop-blur-sm">
                 <div className="flex items-center mb-6">
-                  <div className="h-12 w-12 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
-                    <Cpu className="h-6 w-6 text-blue-500" />
+                  <div className="h-14 w-14 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mr-4">
+                    <Cpu className="h-7 w-7 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white">MHM</h3>
+                  <h3 className="text-4xl font-bold text-white">MHM</h3>
                 </div>
 
-                <p className="text-gray-300 mb-6 text-lg">
+                <p className="text-gray-200 mb-6 text-lg">
                   Next-generation agency engineered to{" "}
                   <span className="font-bold text-blue-400">
                     design, develop, and deploy fully autonomous AI agents
@@ -62,37 +66,37 @@ export default function MhmSection() {
                   that serve as intelligent operational arms for coaches, consultants, and digital enterprises.
                 </p>
 
-                <p className="text-gray-400 mb-8">
+                <p className="text-gray-300 mb-8">
                   Built on agentic architecture, our systems integrate LLMs with real-time task execution, creating
                   digital employees that operate 24/7 across voice, text, and web interfaces.
                 </p>
 
-                <p className="text-gray-300 mb-6 text-lg font-semibold">
-                  We are not another chatbot company—we are building{" "}
-                  <span className="font-bold text-blue-400">autonomous infrastructure for the agentic era</span>.
-                </p>
-
-                <div className="flex flex-wrap gap-4 mb-6">
-                  <span className="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm">AI Agents</span>
-                  <span className="px-3 py-1 bg-purple-900/30 text-purple-400 rounded-full text-sm">
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">
+                    AI Agents
+                  </span>
+                  <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">
                     LLM Integration
                   </span>
-                  <span className="px-3 py-1 bg-indigo-900/30 text-indigo-400 rounded-full text-sm">
+                  <span className="px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-medium border border-indigo-500/30">
                     Voice Interfaces
                   </span>
-                  <span className="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm">Automation</span>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  Contact MHM
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                <Button
+                  onClick={openCalendly}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-6 py-3 rounded-xl font-semibold"
+                >
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Schedule Demo
                 </Button>
               </div>
             </div>
           </motion.div>
 
+          {/* Rest of the MHM section content remains the same but with enhanced styling */}
           <motion.div variants={itemVariants}>
-            <h2 className="text-3xl font-bold mb-6 text-white">Key Capabilities</h2>
+            <h2 className="text-4xl font-bold mb-8 text-white">Key Capabilities</h2>
 
             <div className="space-y-6">
               <motion.div
@@ -333,72 +337,84 @@ export default function MhmSection() {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
+        {/* Call to Action with Calendly */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           className="mb-20"
         >
-          <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-lg border border-gray-800 p-8 text-center">
-            <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-4 text-white">
+          <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/40 border border-blue-500/30 rounded-2xl p-8 text-center backdrop-blur-sm">
+            <motion.h2 variants={itemVariants} className="text-4xl font-bold mb-4 text-white">
               Ready to Deploy Your AI Workforce?
             </motion.h2>
-            <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <motion.p variants={itemVariants} className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
               Transform your business operations with autonomous AI agents that work 24/7 to engage customers and
               streamline workflows.
             </motion.p>
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6">
+              <Button
+                onClick={openCalendly}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6 rounded-xl font-semibold"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
                 Schedule a Demo
-                <Clock className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="border-gray-700 hover:bg-gray-800 text-lg px-8 py-6">
-                Learn More
+              <Button
+                variant="outline"
+                onClick={openCalendly}
+                className="border-2 border-gray-600 hover:border-blue-500 hover:bg-blue-500/10 text-lg px-8 py-6 rounded-xl font-semibold"
+              >
+                Book Consultation
                 <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
           </div>
         </motion.div>
 
-        {/* Leadership Section - With Hamza as sole founder */}
+        {/* Updated Leadership Section */}
         <motion.div variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
-          <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8 text-white text-center">
+          <motion.h2 variants={itemVariants} className="text-4xl font-bold mb-8 text-white text-center">
             Leadership
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+            <motion.div
+              variants={itemVariants}
+              className="bg-gradient-to-br from-gray-900/80 to-blue-900/30 rounded-2xl border border-blue-500/30 p-6 backdrop-blur-sm"
+            >
               <div className="flex items-start">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-2xl font-bold text-white">H</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white">Hamza</h3>
-                  <p className="text-blue-400 mb-3">Founder</p>
-                  <p className="text-gray-400">
-                    As the founder of MHM, Hamza leads the company's vision and strategic direction. With expertise in
-                    AI agent development and automation, he oversees all aspects of the business including product
-                    development, client relationships, and company growth. His innovative approach to autonomous AI
-                    agents has established MHM as a leader in the agentic technology space.
+                  <p className="text-blue-400 mb-3">Co-Founder of Ahmezz & Owner of MHM</p>
+                  <p className="text-gray-300">
+                    As Co-Founder of Ahmezz and Owner of MHM, Hamza leads the development of autonomous AI agents and
+                    automation systems. His expertise in AI agent development has established MHM as a leader in the
+                    agentic technology space, focusing on creating digital employees that transform business operations.
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+            <motion.div
+              variants={itemVariants}
+              className="bg-gradient-to-br from-gray-900/80 to-blue-900/30 rounded-2xl border border-blue-500/30 p-6 backdrop-blur-sm"
+            >
               <div className="flex items-start">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-2xl font-bold text-white">G</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white">Gideon</h3>
-                  <p className="text-blue-400 mb-3">Service Delivery Specialist</p>
-                  <p className="text-gray-400">
-                    Gideon oversees the implementation and ongoing support of MHM's AI agent deployments. His methodical
-                    approach ensures clients receive solutions that align with their operational needs and business
-                    objectives. Working closely with Hamza, he translates the company's vision into practical,
-                    high-quality AI agents for clients.
+                  <p className="text-blue-400 mb-3">Service Delivery Specialist at MHM & WOS</p>
+                  <p className="text-gray-300">
+                    Gideon oversees implementation and ongoing support across both MHM and WOS. At MHM, he ensures
+                    seamless AI agent deployments, while at WOS, he manages agency workflow implementations. His
+                    cross-platform expertise ensures clients receive consistent, high-quality service delivery across
+                    both platforms.
                   </p>
                 </div>
               </div>

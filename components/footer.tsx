@@ -82,6 +82,11 @@ export default function Footer() {
                   <ExternalLink className="ml-1 h-3 w-3" />
                 </Link>
               </li>
+              <li>
+                <Link href="#wos" className="text-gray-400 hover:text-white transition-colors">
+                  WOS | Web Ops Studio
+                </Link>
+              </li>
               <li className="pt-2">
                 <span className="text-purple-400 text-sm font-medium">More agencies coming soon...</span>
               </li>

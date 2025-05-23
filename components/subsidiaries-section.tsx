@@ -62,7 +62,7 @@ export default function SubsidiariesSection() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
           <motion.div
             variants={itemVariants}
@@ -207,6 +207,56 @@ export default function SubsidiariesSection() {
                 onClick={() => scrollToSection("yapron")}
                 variant="outline"
                 className="group w-full border-gray-700 hover:bg-gray-800 hover:border-green-500 mt-auto"
+              >
+                Learn More
+                <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+              </Button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+            className="relative group"
+          >
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-600 to-black rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+            <div className="relative bg-black rounded-lg p-8 border border-gray-600 h-full flex flex-col">
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 bg-gray-800 rounded-full p-2 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path d="M12 16V12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 8H12.01" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white">WOS | Web Ops Studio</h3>
+              <p className="text-gray-300 mb-6 flex-grow">
+                AI-powered WebSites/WebApps and operations platform for Agency Owners and Founders, designed to reduce
+                stress and operational inefficiencies.
+              </p>
+              <ul className="text-gray-400 mb-6 space-y-2">
+                <li className="flex items-start">
+                  <span className="text-white mr-2">•</span>
+                  Automated client workflows
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-2">•</span>
+                  Intelligent lead management
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-2">•</span>
+                  Marketing automation
+                </li>
+              </ul>
+              <Button
+                onClick={() => scrollToSection("wos")}
+                variant="outline"
+                className="group w-full border-gray-600 hover:bg-gray-800 hover:border-white mt-auto text-white"
               >
                 Learn More
                 <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />

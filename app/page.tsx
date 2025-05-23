@@ -5,6 +5,7 @@ import SubsidiariesSection from "@/components/subsidiaries-section"
 import MhmSection from "@/components/mhm-section"
 import CriticomSection from "@/components/criticom-section"
 import YapronSection from "@/components/yapron-section"
+import WosSection from "@/components/wos-section"
 import ComingSoonSection from "@/components/coming-soon-section"
 import TeamSection from "@/components/team-section"
 import ContactSection from "@/components/contact-section"
@@ -22,6 +23,7 @@ export default function Home() {
         <MhmSection />
         <CriticomSection />
         <YapronSection />
+        <WosSection />
         <ComingSoonSection />
         <TeamSection />
         <ContactSection />
