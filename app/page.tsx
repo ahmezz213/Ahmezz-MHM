@@ -9,21 +9,24 @@ import ComingSoonSection from "@/components/coming-soon-section"
 import TeamSection from "@/components/team-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
+import { Suspense } from "react"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
-      <HeroSection />
-      <WhyChooseSection />
-      <SubsidiariesSection />
-      <MhmSection />
-      <CriticomSection />
-      <YapronSection />
-      <ComingSoonSection />
-      <TeamSection />
-      <ContactSection />
-      <Footer />
+      <Suspense fallback={<div className="h-screen w-full flex items-center justify-center">Loading...</div>}>
+        <HeroSection />
+        <WhyChooseSection />
+        <SubsidiariesSection />
+        <MhmSection />
+        <CriticomSection />
+        <YapronSection />
+        <ComingSoonSection />
+        <TeamSection />
+        <ContactSection />
+        <Footer />
+      </Suspense>
     </main>
   )
 }

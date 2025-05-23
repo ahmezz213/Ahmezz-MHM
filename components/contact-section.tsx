@@ -46,18 +46,27 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      // Simulate form submission
+      await new Promise((resolve) => setTimeout(resolve, 1500))
 
-    setIsSubmitting(false)
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    })
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      })
 
-    // Reset form
-    const form = e.target as HTMLFormElement
-    form.reset()
+      // Reset form
+      const form = e.target as HTMLFormElement
+      form.reset()
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

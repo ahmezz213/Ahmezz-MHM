@@ -10,10 +10,16 @@ import { useMobile } from "@/hooks/use-mobile"
 import { motion } from "framer-motion"
 
 export default function Navbar() {
+  // Add this at the beginning of the Navbar function
+  const [mounted, setMounted] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { toast } = useToast()
   const isMobile = useMobile()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +48,11 @@ export default function Navbar() {
       title: "Let's collaborate!",
       description: "Reach out to us to learn more about our agency hub.",
     })
+  }
+
+  // And wrap the return statement with this check:
+  if (!mounted) {
+    return null // Return null on first render to avoid hydration mismatch
   }
 
   return (

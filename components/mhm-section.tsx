@@ -253,31 +253,121 @@ export default function MhmSection() {
           </div>
         </motion.div>
 
-        {/* Leadership Section */}
+        {/* AI Agent Features */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="mb-20"
+        >
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8 text-white text-center">
+            AI Agent Features
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-blue-900/30 flex items-center justify-center mb-4">
+                <Bot className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Natural Conversation</h3>
+              <p className="text-gray-400">
+                Our AI agents engage in natural, human-like conversations that build rapport and trust with your
+                customers. They understand context, remember previous interactions, and respond appropriately.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-purple-900/30 flex items-center justify-center mb-4">
+                <Zap className="h-6 w-6 text-purple-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Multi-Channel Presence</h3>
+              <p className="text-gray-400">
+                Deploy your AI agents across multiple channels including your website, WhatsApp, Telegram, and more.
+                Provide consistent service wherever your customers prefer to engage.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-indigo-900/30 flex items-center justify-center mb-4">
+                <Code className="h-6 w-6 text-indigo-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Custom Knowledge Base</h3>
+              <p className="text-gray-400">
+                Each AI agent is trained on your specific business information, services, and FAQs, ensuring they
+                provide accurate and relevant information to your customers.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-blue-900/30 flex items-center justify-center mb-4">
+                <Clock className="h-6 w-6 text-blue-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Automated Task Execution</h3>
+              <p className="text-gray-400">
+                Our agents don't just talk—they act. They can schedule appointments, update CRMs, send follow-up emails,
+                and perform other tasks that typically require human intervention.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-purple-900/30 flex items-center justify-center mb-4">
+                <Cpu className="h-6 w-6 text-purple-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Continuous Learning</h3>
+              <p className="text-gray-400">
+                Our AI agents improve over time by learning from interactions. They adapt to your business needs and
+                customer preferences, becoming more effective with each conversation.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
+              <div className="h-12 w-12 rounded-full bg-indigo-900/30 flex items-center justify-center mb-4">
+                <Globe className="h-6 w-6 text-indigo-500" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Seamless Handoff</h3>
+              <p className="text-gray-400">
+                When a situation requires human intervention, our agents smoothly transfer the conversation to your
+                team, providing full context and conversation history.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="mb-20"
+        >
+          <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-lg border border-gray-800 p-8 text-center">
+            <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-4 text-white">
+              Ready to Deploy Your AI Workforce?
+            </motion.h2>
+            <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business operations with autonomous AI agents that work 24/7 to engage customers and
+              streamline workflows.
+            </motion.p>
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6">
+                Schedule a Demo
+                <Clock className="ml-2 h-5 w-5" />
+              </Button>
+              <Button variant="outline" className="border-gray-700 hover:bg-gray-800 text-lg px-8 py-6">
+                Learn More
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Leadership Section - With Hamza as sole founder */}
         <motion.div variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
           <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8 text-white text-center">
             Leadership
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
-              <div className="flex items-start">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-2xl font-bold text-white">T</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">Taufiq Ahmed</h3>
-                  <p className="text-blue-400 mb-3">Co-founder</p>
-                  <p className="text-gray-400">
-                    As co-founder of MHM, Taufiq focuses on sales and company representation. His primary
-                    responsibilities include client acquisition, relationship management, and representing the company
-                    in business contexts. He works closely with the service delivery team to ensure client needs are
-                    understood and communicated effectively.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <motion.div variants={itemVariants} className="bg-gray-900/50 rounded-lg border border-gray-800 p-6">
               <div className="flex items-start">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center mr-4 flex-shrink-0">
@@ -285,11 +375,12 @@ export default function MhmSection() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white">Hamza</h3>
-                  <p className="text-blue-400 mb-3">Co-founder</p>
+                  <p className="text-blue-400 mb-3">Founder</p>
                   <p className="text-gray-400">
-                    Hamza co-founded MHM and oversees company management and outreach strategies. With a focus on
-                    operational efficiency and business development, he ensures that MHM maintains strong client
-                    relationships while expanding its market presence.
+                    As the founder of MHM, Hamza leads the company's vision and strategic direction. With expertise in
+                    AI agent development and automation, he oversees all aspects of the business including product
+                    development, client relationships, and company growth. His innovative approach to autonomous AI
+                    agents has established MHM as a leader in the agentic technology space.
                   </p>
                 </div>
               </div>
@@ -306,7 +397,8 @@ export default function MhmSection() {
                   <p className="text-gray-400">
                     Gideon oversees the implementation and ongoing support of MHM's AI agent deployments. His methodical
                     approach ensures clients receive solutions that align with their operational needs and business
-                    objectives.
+                    objectives. Working closely with Hamza, he translates the company's vision into practical,
+                    high-quality AI agents for clients.
                   </p>
                 </div>
               </div>
