@@ -87,6 +87,17 @@ export default function Footer() {
                   WOS | Web Ops Studio
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="https://v0-wos-website-design.vercel.app/"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WOS Website
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </Link>
+              </li>
               <li className="pt-2">
                 <span className="text-purple-400 text-sm font-medium">More agencies coming soon...</span>
               </li>

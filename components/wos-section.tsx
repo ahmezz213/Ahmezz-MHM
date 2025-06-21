@@ -15,6 +15,10 @@ export default function WosSection() {
     window.open("https://calendly.com/ahmezz-amz/30min", "_blank")
   }
 
+  const openWosWebsite = () => {
+    window.open("https://v0-wos-website-design.vercel.app/", "_blank")
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -64,19 +68,19 @@ export default function WosSection() {
                 </p>
 
                 <p className="text-gray-300 mb-8">
-                  Tailored for creative and personal branding agencies, WOS is designed to reduce stress and operational
-                  inefficiencies while enabling agencies to focus more on creative delivery.
+                  WOS builds AI-powered operations that run your agency while you sleep. More leads, less chaos, zero
+                  compromise on quality. Tailored for creative and personal branding agencies.
                 </p>
 
                 <div className="flex flex-wrap gap-3 mb-6">
                   <span className="px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium border border-white/30">
-                    Agency Operations
+                    IntelliPresence
                   </span>
                   <span className="px-4 py-2 bg-gray-700/50 text-gray-200 rounded-full text-sm font-medium border border-gray-600">
-                    Workflow Automation
+                    IntelliOps
                   </span>
                   <span className="px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium border border-white/30">
-                    Lead Management
+                    IntelliStack
                   </span>
                 </div>
 
@@ -86,15 +90,15 @@ export default function WosSection() {
                     className="bg-white text-black hover:bg-gray-200 text-lg px-6 py-3 rounded-xl font-semibold"
                   >
                     <Calendar className="mr-2 h-5 w-5" />
-                    Schedule Demo
+                    Start Your Transformation
                   </Button>
 
                   <Button
                     variant="outline"
                     className="border-2 border-gray-600 hover:bg-gray-800 text-white text-lg px-6 py-3 rounded-xl font-semibold"
-                    onClick={() => window.open("https://kzmkxay08ve8dgmtjeix.lite.vusercontent.net/#tech", "_blank")}
+                    onClick={openWosWebsite}
                   >
-                    View Full Website
+                    Visit WOS Website
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -114,10 +118,10 @@ export default function WosSection() {
                   <Workflow className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1 text-white">Automated Client Onboarding</h4>
+                  <h4 className="text-lg font-semibold mb-1 text-white">IntelliPresence</h4>
                   <p className="text-gray-300">
-                    Streamlined workflows that automate the entire client onboarding process, reducing manual work and
-                    ensuring consistency across all new client engagements.
+                    Intelligent websites and web applications that automatically capture leads, qualify prospects, and
+                    nurture relationships while maintaining your brand's unique voice and aesthetic.
                   </p>
                 </div>
               </motion.div>
@@ -130,10 +134,10 @@ export default function WosSection() {
                   <Target className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1 text-white">Intelligent Lead Capture & Management</h4>
+                  <h4 className="text-lg font-semibold mb-1 text-white">IntelliOps</h4>
                   <p className="text-gray-300">
-                    AI-powered lead capture system that intelligently qualifies prospects and manages them through your
-                    sales funnel with automated follow-ups and nurturing sequences.
+                    AI-powered operational systems that automate client onboarding, project management, and
+                    communication workflows, removing inefficiency and fixing broken tech stacks.
                   </p>
                 </div>
               </motion.div>
@@ -146,10 +150,10 @@ export default function WosSection() {
                   <Zap className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1 text-white">Marketing Automation Integration</h4>
+                  <h4 className="text-lg font-semibold mb-1 text-white">IntelliStack</h4>
                   <p className="text-gray-300">
-                    Seamlessly integrated marketing automation that connects with your backend operations, ensuring
-                    marketing efforts translate directly into operational efficiency.
+                    Complete technology infrastructure that integrates seamlessly with your existing tools, creating a
+                    unified growth and operations engine for your agency.
                   </p>
                 </div>
               </motion.div>
@@ -162,10 +166,10 @@ export default function WosSection() {
                   <BarChart3 className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1 text-white">Streamlined Project Management</h4>
+                  <h4 className="text-lg font-semibold mb-1 text-white">Growth & Operations Engine</h4>
                   <p className="text-gray-300">
-                    Comprehensive project and task management system designed specifically for creative agencies, with
-                    built-in templates and workflows for common agency deliverables.
+                    We don't just deliver a website - we deliver an entire growth and operations engine that allows
+                    agency owners to focus on growth, not operations.
                   </p>
                 </div>
               </motion.div>
@@ -189,10 +193,10 @@ export default function WosSection() {
               <div className="h-12 w-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
                 <Zap className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Time Savings</h3>
+              <h3 className="text-xl font-semibold mb-3 text-white">More Leads</h3>
               <p className="text-gray-300">
-                Saves significant time by automating repetitive tasks, allowing your team to focus on what they do best
-                — creating exceptional work for clients.
+                AI-powered lead generation and qualification systems that work 24/7 to bring qualified prospects to your
+                agency while you focus on creative work.
               </p>
             </motion.div>
 
@@ -200,10 +204,10 @@ export default function WosSection() {
               <div className="h-12 w-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
                 <BarChart3 className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Operational Efficiency</h3>
+              <h3 className="text-xl font-semibold mb-3 text-white">Less Chaos</h3>
               <p className="text-gray-300">
-                Improves operational efficiency and consistency across all agency processes, ensuring quality delivery
-                every time.
+                Streamlined operations and automated workflows eliminate the chaos of manual processes, creating smooth
+                and predictable agency operations.
               </p>
             </motion.div>
 
@@ -211,10 +215,10 @@ export default function WosSection() {
               <div className="h-12 w-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
                 <Target className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Creative Focus</h3>
+              <h3 className="text-xl font-semibold mb-3 text-white">Zero Compromise</h3>
               <p className="text-gray-300">
-                Enables agencies to focus more on creative delivery by handling the operational complexities behind the
-                scenes.
+                Maintain the highest quality standards while scaling operations. Our systems enhance your capabilities
+                without compromising on creative excellence.
               </p>
             </motion.div>
 
@@ -222,9 +226,10 @@ export default function WosSection() {
               <div className="h-12 w-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Scalable Growth</h3>
+              <h3 className="text-xl font-semibold mb-3 text-white">Focus on Growth</h3>
               <p className="text-gray-300">
-                Scales agency workflows smoothly without increasing overhead, supporting sustainable business growth.
+                Stop wearing multiple hats and focus on what you do best - growing your agency and serving clients at
+                the highest level.
               </p>
             </motion.div>
           </div>
@@ -238,7 +243,7 @@ export default function WosSection() {
           className="mb-20"
         >
           <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8 text-white text-center">
-            Perfect For
+            Perfect For Mid-Sized Agencies
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -328,11 +333,11 @@ export default function WosSection() {
         >
           <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-700 rounded-2xl p-8 text-center">
             <motion.h2 variants={itemVariants} className="text-4xl font-bold mb-4 text-white">
-              Ready to Transform Your Agency Operations?
+              Stop Wearing Multiple Hats
             </motion.h2>
             <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Discover how WOS can streamline your workflows and help you focus on what you do best — creating
-              exceptional work for your clients.
+              Let WOS build AI-powered operations that run your agency while you sleep. More leads, less chaos, zero
+              compromise on quality.
             </motion.p>
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
@@ -340,14 +345,14 @@ export default function WosSection() {
                 className="bg-white text-black hover:bg-gray-200 text-lg px-8 py-6 rounded-xl font-semibold"
               >
                 <Calendar className="mr-2 h-5 w-5" />
-                Schedule a Demo
+                Start Your Transformation
               </Button>
               <Button
                 variant="outline"
                 className="border-2 border-gray-600 hover:bg-gray-800 text-white text-lg px-8 py-6 rounded-xl font-semibold"
-                onClick={() => window.open("https://kzmkxay08ve8dgmtjeix.lite.vusercontent.net/#tech", "_blank")}
+                onClick={openWosWebsite}
               >
-                Explore Full Platform
+                Explore WOS Platform
                 <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
