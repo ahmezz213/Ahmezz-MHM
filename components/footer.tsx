@@ -62,6 +62,17 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="https://v0-mhm-website.vercel.app"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MHM Website
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </Link>
+              </li>
+              <li>
                 <Link href="#criticom" className="text-gray-400 hover:text-white transition-colors">
                   Criticom
                 </Link>
@@ -158,7 +169,7 @@ export default function Footer() {
               variant="outline"
               size="icon"
               onClick={scrollToTop}
-              className="rounded-full border-gray-700 text-gray-400 hover:text-white hover:border-gray-600"
+              className="rounded-full border-gray-700 text-gray-400 hover:text-white hover:border-gray-600 bg-transparent"
             >
               <ArrowUp className="h-4 w-4" />
               <span className="sr-only">Back to top</span>

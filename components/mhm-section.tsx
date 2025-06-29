@@ -15,6 +15,10 @@ export default function MhmSection() {
     window.open("https://calendly.com/ahmezz-amz/30min", "_blank")
   }
 
+  const openMhmWebsite = () => {
+    window.open("https://v0-mhm-website.vercel.app", "_blank")
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -59,16 +63,12 @@ export default function MhmSection() {
                 </div>
 
                 <p className="text-gray-200 mb-6 text-lg">
-                  Next-generation agency engineered to{" "}
-                  <span className="font-bold text-blue-400">
-                    design, develop, and deploy fully autonomous AI agents
-                  </span>{" "}
-                  that serve as intelligent operational arms for coaches, consultants, and digital enterprises.
+                  <span className="font-bold text-blue-400">Where Intelligent Agents Are Built.</span>
                 </p>
 
                 <p className="text-gray-300 mb-8">
-                  Built on agentic architecture, our systems integrate LLMs with real-time task execution, creating
-                  digital employees that operate 24/7 across voice, text, and web interfaces.
+                  Next-generation agency engineered to design, develop, and deploy fully autonomous AI agents that serve
+                  as intelligent operational arms for coaches, consultants, and digital enterprises.
                 </p>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -83,13 +83,24 @@ export default function MhmSection() {
                   </span>
                 </div>
 
-                <Button
-                  onClick={openCalendly}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-6 py-3 rounded-xl font-semibold"
-                >
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Schedule Demo
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    onClick={openCalendly}
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-6 py-3 rounded-xl font-semibold"
+                  >
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Get Started
+                  </Button>
+
+                  <Button
+                    variant="outline"
+                    className="border-2 border-gray-600 hover:border-blue-500 hover:bg-blue-500/10 text-lg px-6 py-3 rounded-xl font-semibold bg-transparent"
+                    onClick={openMhmWebsite}
+                  >
+                    Visit MHM Website
+                    <ExternalLink className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -337,6 +348,28 @@ export default function MhmSection() {
           </div>
         </motion.div>
 
+        {/* Agentic Era Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="mb-20"
+        >
+          <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/40 border border-blue-500/30 rounded-2xl p-8 backdrop-blur-sm">
+            <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-6 text-white">
+              Building for the Agentic Era
+            </motion.h2>
+            <motion.p variants={itemVariants} className="text-gray-200 text-lg mb-6">
+              Built on agentic architecture, our systems integrate LLMs with real-time task execution, creating digital
+              employees that operate 24/7 across voice, text, and web interfaces.
+            </motion.p>
+            <motion.p variants={itemVariants} className="text-gray-300">
+              We don't just build chatbots - we create intelligent operational arms that think, decide, and act
+              autonomously to serve your business needs around the clock.
+            </motion.p>
+          </div>
+        </motion.div>
+
         {/* Call to Action with Calendly */}
         <motion.div
           variants={containerVariants}
@@ -358,14 +391,14 @@ export default function MhmSection() {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6 rounded-xl font-semibold"
               >
                 <Calendar className="mr-2 h-5 w-5" />
-                Schedule a Demo
+                Get Started
               </Button>
               <Button
                 variant="outline"
-                onClick={openCalendly}
-                className="border-2 border-gray-600 hover:border-blue-500 hover:bg-blue-500/10 text-lg px-8 py-6 rounded-xl font-semibold"
+                onClick={openMhmWebsite}
+                className="border-2 border-gray-600 hover:border-blue-500 hover:bg-blue-500/10 text-lg px-8 py-6 rounded-xl font-semibold bg-transparent"
               >
-                Book Consultation
+                Explore MHM Platform
                 <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
