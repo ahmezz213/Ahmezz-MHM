@@ -1,34 +1,36 @@
-import Navbar from "@/components/navbar"
-import HeroSection from "@/components/hero-section"
-import WhyChooseSection from "@/components/why-choose-section"
-import SubsidiariesSection from "@/components/subsidiaries-section"
-import MhmSection from "@/components/mhm-section"
-import CriticomSection from "@/components/criticom-section"
-import YapronSection from "@/components/yapron-section"
+import AgencyTicker from "@/components/agency-ticker"
 import WosSection from "@/components/wos-section"
-import ComingSoonSection from "@/components/coming-soon-section"
-import TeamSection from "@/components/team-section"
+import MhmSection from "@/components/mhm-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
-import { Suspense } from "react"
+import AhmezzTeamSection from "@/components/ahmezz-team-section"
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <Navbar />
-      <Suspense fallback={<div className="h-screen w-full flex items-center justify-center">Loading...</div>}>
-        <HeroSection />
-        <WhyChooseSection />
-        <SubsidiariesSection />
-        <MhmSection />
-        <CriticomSection />
-        <YapronSection />
+    <main className="min-h-screen w-full overflow-x-hidden">
+      {/* Top dynamic names strip - white background */}
+      <AgencyTicker />
+
+      {/* WOS: white + purple themed section */}
+      <section id="wos" className="bg-white text-slate-900">
         <WosSection />
-        <ComingSoonSection />
-        <TeamSection />
+      </section>
+
+      {/* AHMEZZ Team: subtle, white to match WOS */}
+      <section className="bg-white text-slate-900">
+        <AhmezzTeamSection />
+      </section>
+
+      {/* MHM: keep existing styling, wrapped on a dark canvas so WOS doesn't look odd */}
+      <section id="mhm" className="bg-black text-white">
+        <MhmSection />
+      </section>
+
+      {/* Contact + Footer */}
+      <section id="contact" className="bg-black text-white">
         <ContactSection />
-        <Footer />
-      </Suspense>
+      </section>
+      <Footer />
     </main>
   )
 }
