@@ -1,9 +1,9 @@
 import AgencyTicker from "@/components/agency-ticker"
 import WosSection from "@/components/wos-section"
+import AhmezzTeamSection from "@/components/ahmezz-team-section"
 import MhmSection from "@/components/mhm-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
-import AhmezzTeamSection from "@/components/ahmezz-team-section"
 
 export default function Page() {
   return (
@@ -11,17 +11,13 @@ export default function Page() {
       {/* Top dynamic names strip - white background */}
       <AgencyTicker />
 
-      {/* WOS: white + purple themed section */}
-      <section id="wos" className="bg-white text-slate-900">
-        <WosSection />
-      </section>
+      {/* WOS: white + purple themed section with full conversion flow */}
+      <WosSection />
 
-      {/* AHMEZZ Team: subtle, white to match WOS */}
-      <section className="bg-white text-slate-900">
-        <AhmezzTeamSection />
-      </section>
+      {/* Subtle team section */}
+      <AhmezzTeamSection />
 
-      {/* MHM: keep existing styling, wrapped on a dark canvas so WOS doesn't look odd */}
+      {/* MHM on dark canvas so WOS doesn't look odd */}
       <section id="mhm" className="bg-black text-white">
         <MhmSection />
       </section>
