@@ -55,7 +55,7 @@ export default function MhmSection() {
                   <div className="h-12 w-12 rounded-full bg-blue-900/30 flex items-center justify-center mr-4">
                     <Cpu className="h-6 w-6 text-blue-500" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white">MHM</h3>
+                  <h3 className="text-3xl font-bold text-white">MHM @AHMEZZ </h3>
                 </div>
 
                 <p className="text-gray-300 mb-6 text-lg">

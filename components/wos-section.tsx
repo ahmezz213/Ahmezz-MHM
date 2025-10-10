@@ -14,12 +14,120 @@ import {
   Users,
   Target,
   HelpCircle,
+  Bot,
+  MessageSquare,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 const CTA_LINK = "https://calendly.com/ahmezz-mhm/30min"
+
+type Workflow = {
+  icon: React.ReactNode
+  title: string
+  goal: string
+  features: string[]
+  outcome: string
+}
+
+const WORKFLOWS: Workflow[] = [
+  {
+    icon: <Mail className="h-5 w-5 text-purple-600" />,
+    title: "AI-Powered Cold Outreach System",
+    goal: "Automate outbound lead generation, nurturing, and meeting booking.",
+    features: [
+      "Automated lead sourcing and enrichment",
+      "Personalized cold emails powered by AI",
+      "Smart follow-ups that adapt to responses",
+      "Calendar-integrated booking system",
+      "Real-time outreach performance dashboard",
+    ],
+    outcome: "A predictable flow of qualified meetings without manual outreach.",
+  },
+  {
+    icon: <Target className="h-5 w-5 text-purple-600" />,
+    title: "Inbound Lead Qualifier & Router",
+    goal: "Instantly qualify and route inbound leads to the right team member.",
+    features: [
+      "AI-driven lead scoring based on intent and fit",
+      "Automatic CRM tagging and ownership assignment",
+      "Smart Slack alerts with lead summaries",
+      "Instant personalized follow-up within minutes",
+    ],
+    outcome: "Every inbound lead is responded to, prioritized, and handled fast.",
+  },
+  {
+    icon: <Bot className="h-5 w-5 text-purple-600" />,
+    title: "AI SDR (Sales Development Rep)",
+    goal: "Manage lead replies, handle objections, and book meetings automatically.",
+    features: [
+      "Understands inbound replies and context",
+      "Classifies intent (interested / neutral / objection)",
+      "Writes human-like contextual responses",
+      "Books meetings directly from the email thread",
+    ],
+    outcome: "Zero leads slip through; every opportunity is followed up automatically.",
+  },
+  {
+    icon: <Rocket className="h-5 w-5 text-purple-600" />,
+    title: "Automated Client Onboarding System",
+    goal: "Replace manual onboarding steps with a seamless automated process.",
+    features: [
+      "Auto-creates client portal upon deal closure",
+      "Sends personalized welcome and onboarding instructions",
+      "Collects brand info, access credentials, and contracts",
+      "Notifies internal team when onboarding is complete",
+    ],
+    outcome: "Fast, consistent, and hands-free onboarding for every new client.",
+  },
+  {
+    icon: <PhoneCall className="h-5 w-5 text-purple-600" />,
+    title: "Post-Call Follow-Up & Deal Tracker",
+    goal: "Automate call summaries, CRM updates, and next-step follow-ups.",
+    features: [
+      "AI-generated meeting notes and action items",
+      "Auto-updates deal stage in CRM",
+      "Sends personalized follow-up emails right after calls",
+    ],
+    outcome: "No manual admin work — calls turn into follow-ups instantly.",
+  },
+  {
+    icon: <LayoutDashboard className="h-5 w-5 text-purple-600" />,
+    title: "Sales Ops Dashboard",
+    goal: "Give teams a unified, transparent view of the sales pipeline and ROI.",
+    features: [
+      "Tracks outreach, replies, meetings, and conversions",
+      "Visualizes performance across campaigns and sources",
+      "Calculates automation ROI and time saved",
+      "Monitors key metrics in real time",
+    ],
+    outcome: "Full visibility into what’s working — and where to improve.",
+  },
+  {
+    icon: <PhoneCall className="h-5 w-5 text-purple-600" />,
+    title: "AI Voice Receptionist",
+    goal: "Handle inbound calls, qualify leads, and book meetings automatically.",
+    features: [
+      "Conversational AI that greets and qualifies callers",
+      "Lead intent detection and real-time call summaries",
+      "Automatic scheduling and CRM updates",
+    ],
+    outcome: "No missed calls — every lead is answered, qualified, and booked.",
+  },
+  {
+    icon: <MessageSquare className="h-5 w-5 text-purple-600" />,
+    title: "Website Chat-to-Call Agent",
+    goal: "Convert website visitors into live calls and qualified leads.",
+    features: [
+      "Engages visitors through interactive chat",
+      "Qualifies interest and captures lead info",
+      "Books calls directly in your team’s calendar",
+      "Pushes data instantly to CRM",
+    ],
+    outcome: "Turn passive website traffic into real conversations and meetings.",
+  },
+]
 
 export default function WosSection() {
   const Feature = ({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) => (
@@ -110,15 +218,16 @@ export default function WosSection() {
         {/* Hero */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
-            <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">WOS • WebOps Studio</Badge>
+            <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">WOS • @ Ahmezz </Badge>
             <span className="text-xs text-slate-500">Owner: Taufiq Ahmed</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-            We build AI systems that actually close deals.
+            Smarter systems. More clients. Less effort
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-            Workflow-first, ROI-focused automation for marketing and creative agencies. Clear outcomes, rapid setup,
-            continuous optimization.
+            {
+              'We’re not an \"AI agency\" we’re problem solvers. We install sales infrastructure from discovery to onboarding using AI wherever it wins. Most workflows are AI‑powered; every decision is outcome‑driven.'
+            }
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Button asChild className="bg-purple-600 text-white hover:bg-purple-700">
@@ -149,44 +258,86 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* What We Build */}
+        {/* What We Build (kept intact, copy adjusted to problem-solver tone) */}
         <div className="mt-16">
-          <h3 className="text-center text-xl font-semibold text-slate-900">What We Build</h3>
+          <h3 className="text-center text-xl font-semibold text-slate-900">Workflows We Install</h3>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <Feature
               icon={<Brain className="h-5 w-5 text-purple-600" />}
-              title="AI‑Powered Lead Generation"
-              desc="Outbound systems that find, qualify, and warm up leads automatically."
+              title="Lead Generation Engine"
+              desc="Outbound systems that find, qualify, and warm up leads — predictable meetings, less manual work."
             />
             <Feature
               icon={<Mail className="h-5 w-5 text-purple-600" />}
-              title="Automated Email Agents"
-              desc="Autonomous follow‑ups, meeting booking, and pipeline nurturing."
+              title="Autonomous Email Follow‑ups"
+              desc="Context‑aware replies and booking that keep deals moving without babysitting threads."
             />
             <Feature
               icon={<PhoneCall className="h-5 w-5 text-purple-600" />}
-              title="NLP Voice Receptionists"
-              desc="Voice agents that answer, qualify, and schedule demos."
+              title="Voice Intake & Scheduling"
+              desc="Reception that answers, qualifies, and books — no missed calls, no missed leads."
             />
             <Feature
               icon={<Sparkles className="h-5 w-5 text-purple-600" />}
-              title="Deep Cold Email Outreach"
-              desc="High‑personalization campaigns with real‑time performance tracking."
+              title="Deep Personalization"
+              desc="High‑signal outreach at scale with adaptive follow‑ups and measurable lift."
             />
             <Feature
               icon={<Rocket className="h-5 w-5 text-purple-600" />}
-              title="Automated Client Onboarding"
-              desc="Full‑funnel automation from signed deal to kickoff."
+              title="Onboarding Automation"
+              desc="Hands‑free onboarding from ‘closed won’ to kickoff — consistent and fast."
             />
             <Feature
               icon={<LayoutDashboard className="h-5 w-5 text-purple-600" />}
-              title="Custom Front‑End Dashboards"
-              desc="Live visibility for pipeline, lead flow, and automation ROI."
+              title="Sales Ops Visibility"
+              desc="Dashboards that show pipeline health, ROI, and where to optimize next."
             />
           </div>
         </div>
 
-        {/* What You Get — Deliverables, Timeline, Not Included */}
+        {/* NEW: Client-Facing Catalog (from your pasted content) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">
+            Sales Infrastructure Workflows (Client‑Facing Catalog)
+          </h3>
+          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-600">
+            The complete sales operating system for marketing and creative agencies — from outreach to onboarding.
+          </p>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {WORKFLOWS.map((wf) => (
+              <Card key={wf.title} className="border-slate-200 bg-white/90">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2">
+                    {wf.icon}
+                    <CardTitle className="text-base text-slate-900">{wf.title}</CardTitle>
+                  </div>
+                  <div className="mt-2 text-xs text-slate-600">
+                    <span className="font-semibold text-slate-700">Goal:</span> {wf.goal}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="mb-3">
+                    <div className="mb-1 text-xs font-semibold text-slate-700">Core Features</div>
+                    <ul className="space-y-1.5">
+                      {wf.features.map((f, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 text-purple-600" />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="rounded-md border border-purple-200 bg-purple-50 p-3 text-xs text-purple-900">
+                    <span className="font-semibold">Outcome: </span>
+                    {wf.outcome}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* What You Get — Deliverables, Timeline, Not Included (kept) */}
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           <Card className="border-slate-200">
             <CardHeader>
@@ -231,7 +382,7 @@ export default function WosSection() {
           </Card>
         </div>
 
-        {/* How It Works / Process */}
+        {/* How It Works / Process (kept) */}
         <div className="mt-16">
           <h3 className="text-center text-xl font-semibold text-slate-900">How It Works</h3>
           <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -243,7 +394,7 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* Use Cases / Vertical Fit */}
+        {/* Use Cases / Vertical Fit (kept) */}
         <div className="mt-16">
           <h3 className="text-center text-xl font-semibold text-slate-900">Use Cases</h3>
           <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-3">
@@ -277,7 +428,7 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* Proof / Mini Case Stories */}
+        {/* Proof / Mini Case Stories (kept) */}
         <div className="mt-16">
           <h3 className="text-center text-xl font-semibold text-slate-900">Proof</h3>
           <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2">
@@ -305,18 +456,18 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* Why WOS / Why Ahmezz */}
+        {/* Why WOS / Why Ahmezz (kept) */}
         <div className="mt-16">
           <h3 className="text-center text-xl font-semibold text-slate-900">Why WOS</h3>
           <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Pill title="Workflow‑first" />
+            <Pill title="Problem‑first" />
+            <Pill title="Workflow‑led" />
             <Pill title="ROI‑driven" />
-            <Pill title="Fast Execution" />
             <Pill title="Transparent Reporting" />
           </div>
         </div>
 
-        {/* Packages / Pricing */}
+        {/* Packages / Pricing (kept) */}
         <div className="mt-16">
           <h3 className="text-center text-xl font-semibold text-slate-900">Packages</h3>
           <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-3">
@@ -354,17 +505,18 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* FAQ */}
+        {/* FAQ (kept) */}
         <div className="mt-16">
           <h3 className="text-center text-xl font-semibold text-slate-900">FAQ</h3>
           <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2">
             <Card className="border-slate-200">
               <CardHeader className="flex flex-row items-center gap-3">
                 <HelpCircle className="h-5 w-5 text-purple-600" />
-                <CardTitle className="text-base">Will this integrate with our tools?</CardTitle>
+                <CardTitle className="text-base">Are you an AI agency?</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-slate-600">
-                Yes. We plug into your CRM, calendar, email, phone, data sources, and other ops tools.
+                No. We’re a problem‑solving partner. We install sales infrastructure and use AI only where it gives you
+                speed and reliability.
               </CardContent>
             </Card>
             <Card className="border-slate-200">
@@ -379,7 +531,7 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA (kept) */}
         <div className="mt-16 rounded-xl border border-purple-200 bg-purple-50 p-6 text-center">
           <h4 className="text-lg font-semibold text-purple-900">Let’s build your engine</h4>
           <p className="mt-1 text-sm text-purple-800">Quick intro call. 30 minutes. Actionable next steps.</p>
