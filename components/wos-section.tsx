@@ -218,7 +218,7 @@ export default function WosSection() {
         {/* Hero */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
-            <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">WOS • @ Ahmezz </Badge>
+            <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">WOS • @ Ahmezz</Badge>
             <span className="text-xs text-slate-500">Owner: Taufiq Ahmed</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
@@ -226,7 +226,7 @@ export default function WosSection() {
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-slate-600">
             {
-              'We’re not an \"AI agency\" we’re problem solvers. We install sales infrastructure from discovery to onboarding using AI wherever it wins. Most workflows are AI‑powered; every decision is outcome‑driven.'
+              'We’re not an "AI agency" we’re problem solvers. We install sales infrastructure from discovery to onboarding using AI wherever it wins. Most workflows are AI‑powered; every decision is outcome‑driven.'
             }
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -240,7 +240,12 @@ export default function WosSection() {
               variant="outline"
               className="border-purple-300 text-purple-700 hover:bg-purple-50 bg-transparent"
             >
-              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" aria-label="See a live workflow">
+              <a
+                href="https://woslive.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="See a live workflow"
+              >
                 See a Live Workflow
               </a>
             </Button>
