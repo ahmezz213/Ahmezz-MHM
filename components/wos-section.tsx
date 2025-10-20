@@ -15,7 +15,6 @@ import {
   Target,
   HelpCircle,
   Bot,
-  MessageSquare,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -59,15 +58,15 @@ const WORKFLOWS: Workflow[] = [
   },
   {
     icon: <Bot className="h-5 w-5 text-purple-600" />,
-    title: "AI SDR (Sales Development Rep)",
-    goal: "Manage lead replies, handle objections, and book meetings automatically.",
+    title: "Inbound Reply Automation",
+    goal: "Handle inbound email responses with AI-powered classification and booking.",
     features: [
-      "Understands inbound replies and context",
       "Classifies intent (interested / neutral / objection)",
-      "Writes human-like contextual responses",
-      "Books meetings directly from the email thread",
+      "Generates contextual, human-like responses",
+      "Books meetings directly from email thread",
+      "Auto-updates CRM with interaction data",
     ],
-    outcome: "Zero leads slip through; every opportunity is followed up automatically.",
+    outcome: "Smart responses + automatic booking—we optimize for your tone over 30 days.",
   },
   {
     icon: <Rocket className="h-5 w-5 text-purple-600" />,
@@ -103,29 +102,6 @@ const WORKFLOWS: Workflow[] = [
       "Monitors key metrics in real time",
     ],
     outcome: "Full visibility into what’s working — and where to improve.",
-  },
-  {
-    icon: <PhoneCall className="h-5 w-5 text-purple-600" />,
-    title: "AI Voice Receptionist",
-    goal: "Handle inbound calls, qualify leads, and book meetings automatically.",
-    features: [
-      "Conversational AI that greets and qualifies callers",
-      "Lead intent detection and real-time call summaries",
-      "Automatic scheduling and CRM updates",
-    ],
-    outcome: "No missed calls — every lead is answered, qualified, and booked.",
-  },
-  {
-    icon: <MessageSquare className="h-5 w-5 text-purple-600" />,
-    title: "Website Chat-to-Call Agent",
-    goal: "Convert website visitors into live calls and qualified leads.",
-    features: [
-      "Engages visitors through interactive chat",
-      "Qualifies interest and captures lead info",
-      "Books calls directly in your team’s calendar",
-      "Pushes data instantly to CRM",
-    ],
-    outcome: "Turn passive website traffic into real conversations and meetings.",
   },
 ]
 
@@ -225,9 +201,9 @@ export default function WosSection() {
             Smarter systems. More clients. Less effort
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-            {
-              'We’re not an "AI agency" we’re problem solvers. We install sales infrastructure from discovery to onboarding using AI wherever it wins. Most workflows are AI‑powered; every decision is outcome‑driven.'
-            }
+            We build done-for-you sales infrastructure for B2B agencies and service businesses. Our systems automate
+            outbound campaigns, inbound responses, and client onboarding—so you can focus on closing deals, not managing
+            processes.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Button asChild className="bg-purple-600 text-white hover:bg-purple-700">
@@ -263,9 +239,13 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* What We Build (kept intact, copy adjusted to problem-solver tone) */}
+        {/* What We Build (Done-For-You Systems) */}
         <div className="mt-16">
-          <h3 className="text-center text-xl font-semibold text-slate-900">Workflows We Install</h3>
+          <h3 className="text-center text-xl font-semibold text-slate-900">What We Build (Done-For-You Systems)</h3>
+          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-600">
+            All systems are custom-built for your workflow, integrated with your tools, and optimized based on real
+            performance data.
+          </p>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <Feature
               icon={<Brain className="h-5 w-5 text-purple-600" />}
@@ -278,6 +258,16 @@ export default function WosSection() {
               desc="Context‑aware replies and booking that keep deals moving without babysitting threads."
             />
             <Feature
+              icon={<Bot className="h-5 w-5 text-purple-600" />}
+              title="Inbound Reply Automation"
+              desc="Handle inbound email responses with AI-powered classification and booking."
+            />
+            <Feature
+              icon={<Rocket className="h-5 w-5 text-purple-600" />}
+              title="Onboarding Automation"
+              desc="Hands‑free onboarding from ‘closed won’ to kickoff — consistent and fast."
+            />
+            <Feature
               icon={<PhoneCall className="h-5 w-5 text-purple-600" />}
               title="Voice Intake & Scheduling"
               desc="Reception that answers, qualifies, and books — no missed calls, no missed leads."
@@ -288,11 +278,6 @@ export default function WosSection() {
               desc="High‑signal outreach at scale with adaptive follow‑ups and measurable lift."
             />
             <Feature
-              icon={<Rocket className="h-5 w-5 text-purple-600" />}
-              title="Onboarding Automation"
-              desc="Hands‑free onboarding from ‘closed won’ to kickoff — consistent and fast."
-            />
-            <Feature
               icon={<LayoutDashboard className="h-5 w-5 text-purple-600" />}
               title="Sales Ops Visibility"
               desc="Dashboards that show pipeline health, ROI, and where to optimize next."
@@ -300,13 +285,11 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* NEW: Client-Facing Catalog (from your pasted content) */}
+        {/* The Four Core Systems */}
         <div className="mt-16">
-          <h3 className="text-center text-xl font-semibold text-slate-900">
-            Sales Infrastructure Workflows (Client‑Facing Catalog)
-          </h3>
+          <h3 className="text-center text-xl font-semibold text-slate-900">The Four Core Systems</h3>
           <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-600">
-            The complete sales operating system for marketing and creative agencies — from outreach to onboarding.
+            Sales infrastructure built specifically for your workflow, integrated with your tools, deployed in weeks.
           </p>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {WORKFLOWS.map((wf) => (
@@ -339,6 +322,47 @@ export default function WosSection() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Who We Work With */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">Who We Work With</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <Target className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">Marketing & Creative Agencies</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Automate outbound prospecting, handle inbound instantly, streamline client onboarding.
+                <div className="mt-3 text-xs font-semibold text-purple-600">
+                  Result: 3–5× more meetings, zero admin bottlenecks
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <Users className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">B2B SaaS Companies</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Scale personalized outreach without hiring SDRs. Qualify inbound leads 24/7. Track pipeline performance.
+                <div className="mt-3 text-xs font-semibold text-purple-600">Result: Lower CAC, faster sales cycles</div>
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <ShieldCheck className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">Consulting & Service Businesses</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Automate discovery call booking, instant response to inquiries, seamless client onboarding.
+                <div className="mt-3 text-xs font-semibold text-purple-600">
+                  Result: More time selling, less time on operations
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
@@ -396,40 +420,6 @@ export default function WosSection() {
             <Step step="03" title="Build" desc="Integrations, routing, QA" time="~1–2 weeks" />
             <Step step="04" title="Launch" desc="Pilot with tracking" time="~3 days" />
             <Step step="05" title="Optimize" desc="Iterate on real usage" time="~1–2 weeks" />
-          </div>
-        </div>
-
-        {/* Use Cases / Vertical Fit (kept) */}
-        <div className="mt-16">
-          <h3 className="text-center text-xl font-semibold text-slate-900">Use Cases</h3>
-          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-3">
-            <Card className="border-slate-200">
-              <CardHeader className="flex flex-row items-center gap-3">
-                <Target className="h-5 w-5 text-purple-600" />
-                <CardTitle className="text-base">Agencies</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm text-slate-600">
-                Faster follow‑ups, cleaner pipeline, and clear ROI on outreach and inbound.
-              </CardContent>
-            </Card>
-            <Card className="border-slate-200">
-              <CardHeader className="flex flex-row items-center gap-3">
-                <Users className="h-5 w-5 text-purple-600" />
-                <CardTitle className="text-base">Coaches</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm text-slate-600">
-                Auto‑qualify, schedule, and nurture — reduce no‑shows and manual chasing.
-              </CardContent>
-            </Card>
-            <Card className="border-slate-200">
-              <CardHeader className="flex flex-row items-center gap-3">
-                <ShieldCheck className="h-5 w-5 text-purple-600" />
-                <CardTitle className="text-base">Consultancies</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm text-slate-600">
-                Transparent reporting, team dashboards, and reliable handoffs from lead to project.
-              </CardContent>
-            </Card>
           </div>
         </div>
 
