@@ -4,6 +4,7 @@ import type React from "react"
 import {
   Brain,
   Mail,
+  PhoneCall,
   LayoutDashboard,
   Rocket,
   CheckCircle2,
@@ -75,6 +76,18 @@ const WORKFLOWS: Workflow[] = [
       "Reduces back-and-forth emails by 90%",
     ],
     outcome: "Clients feel supported from day one. Your team saves 10+ hours/week.",
+  },
+  {
+    icon: <PhoneCall className="h-5 w-5 text-purple-600" />,
+    title: "Post-Call Follow-Up & Deal Tracking",
+    goal: "Never let a conversation momentum die.",
+    features: [
+      "AI generates meeting notes and action items automatically",
+      "Updates deal stage in CRM based on conversation",
+      "Sends personalized follow-up emails within minutes",
+      "Surfaces next-step actions for your team",
+    ],
+    outcome: "No manual admin work. Deals move faster because nothing slips through.",
   },
   {
     icon: <LayoutDashboard className="h-5 w-5 text-purple-600" />,
@@ -241,26 +254,26 @@ export default function WosSection() {
 
         {/* Who We Work With - Outcomes Focused */}
         <div className="mt-20 mb-20">
-          <h3 className="text-2xl font-bold text-slate-900 mb-12 text-center">
-            Built for Agencies (We Solve Every Sales Problem)
-          </h3>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            Whether it's inbound qualification, outreach automation, or client onboarding—we handle your entire sales
-            operation so you can focus on delivery and growth.
-          </p>
+          <h3 className="text-2xl font-bold text-slate-900 mb-12 text-center">Built for Growth Teams</h3>
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Creative & Marketing Agencies",
-                problem: "Losing prospects to slow replies; manual follow-ups kill conversion",
-                solution: "Instant lead response, automated nurturing, meeting booking",
-                outcome: "3–5× more qualified client demos; 10+ hrs/week saved on ops",
+                title: "B2B & SaaS Companies",
+                problem: "Losing deals to slow response times",
+                solution: "Scale outreach without hiring SDRs",
+                outcome: "3–5× more qualified demos booked",
               },
               {
-                title: "Design & Tech Agencies",
-                problem: "Inbound leads go cold; onboarding is chaotic and manual",
-                solution: "Automated intake, qualification, and client onboarding",
-                outcome: "Every lead responded to within 5 minutes; seamless handoff",
+                title: "Agencies & Service Firms",
+                problem: "Manual onboarding chaos and follow-ups",
+                solution: "Automate client communication workflows",
+                outcome: "Seamless client experience, 10+ hrs/week saved",
+              },
+              {
+                title: "Consulting & Coaching",
+                problem: "Discovery calls and follow-ups slip through cracks",
+                solution: "Automated discovery call booking and nurturing",
+                outcome: "No missed leads, consistent pipeline fill",
               },
             ].map((segment, i) => (
               <Card key={i} className="border-slate-200 bg-white hover:shadow-md transition-all">
@@ -358,27 +371,19 @@ export default function WosSection() {
             {[
               {
                 q: "How quickly will we see results?",
-                a: "Week 1: Inbound leads get instant 5-minute responses. Week 2-3: Outreach campaigns go live with automated follow-ups. Week 4: Full ROI visible—typically 3–5× more demos booked, 10+ hours/week saved.",
+                a: "Most teams see 3× faster lead responses within week 1. Full ROI typically appears by week 4.",
               },
               {
-                q: "Will this work for our specific agency workflow?",
-                a: "Yes. We map your exact sales process (service offerings, pricing tiers, discovery calls, etc.) and build custom workflows. You're not adapting to our system—we adapt to you.",
+                q: "Will this actually fit our workflow?",
+                a: "Yes. We map your exact process and build custom workflows. You're not forcing your business into a tool.",
               },
               {
-                q: "What happens if leads aren't qualified properly?",
-                a: "We build in human review loops. Hot leads get flagged for immediate follow-up. Cold leads are nurtured automatically. You can override the system anytime.",
+                q: "What if something breaks?",
+                a: "We manage the entire system. Human escalation protocols ensure nothing slips through.",
               },
               {
-                q: "How does onboarding work? Do we have to manage it?",
-                a: "We handle the entire onboarding workflow end-to-end. From 'deal closed' to intake forms, credential collection, kickoff scheduling—completely automated. You just get notified when they're ready.",
-              },
-              {
-                q: "What if we need to change something mid-project?",
-                a: "We iterate quickly. Any workflow adjustment takes 1-3 days. We monitor performance weekly and optimize without you having to ask.",
-              },
-              {
-                q: "Are we locked in long-term?",
-                a: "No. Month-to-month after the initial implementation. But most agencies see such clear ROI by month 2 that they expand the system.",
+                q: "Can we cancel anytime?",
+                a: "You can, but most teams stay for 18+ months because the ROI becomes obvious quickly.",
               },
             ].map((item, i) => (
               <Card key={i} className="border-slate-200 bg-white">
