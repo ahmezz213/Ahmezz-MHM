@@ -31,16 +31,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} dark`}>
+    <html lang="en" suppressHydrationWarning className="dark">
+      <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
 
+        {/* Basic analytics bootstrap */}
         <Script id="bootstrap-datalayer" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];`}
         </Script>
 
+        {/* JSON-LD Schema: AI Automation Agency (WOS) */}
         <Script id="schema-wos" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             "@context": "https://schema.org",
