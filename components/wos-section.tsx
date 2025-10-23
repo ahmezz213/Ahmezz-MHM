@@ -5,14 +5,17 @@ import {
   Brain,
   Mail,
   PhoneCall,
+  Sparkles,
   LayoutDashboard,
   Rocket,
   CheckCircle2,
+  Timer,
   ShieldCheck,
   Users,
   Target,
+  HelpCircle,
   Bot,
-  TrendingUp,
+  MessageSquare,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -32,80 +35,103 @@ const WORKFLOWS: Workflow[] = [
   {
     icon: <Mail className="h-5 w-5 text-purple-600" />,
     title: "AI-Powered Cold Outreach System",
-    goal: "Automate outbound lead generation with personalized follow-ups that actually convert.",
+    goal: "Automate outbound lead generation, nurturing, and meeting booking.",
     features: [
-      "Automated lead sourcing and AI-driven personalization",
-      "Intelligent follow-ups that adapt to response patterns",
+      "Automated lead sourcing and enrichment",
+      "Personalized cold emails powered by AI",
+      "Smart follow-ups that adapt to responses",
       "Calendar-integrated booking system",
-      "Real-time performance dashboards",
+      "Real-time outreach performance dashboard",
     ],
-    outcome: "Predictable flow of qualified meetings with zero manual outreach.",
+    outcome: "A predictable flow of qualified meetings without manual outreach.",
   },
   {
     icon: <Target className="h-5 w-5 text-purple-600" />,
     title: "Inbound Lead Qualifier & Router",
-    goal: "Turn every inbound lead into an immediate response and qualified opportunity.",
+    goal: "Instantly qualify and route inbound leads to the right team member.",
     features: [
-      "AI-driven lead scoring based on fit and intent",
-      "Automatic CRM tagging and team assignment",
-      "Instant follow-up within minutes of inquiry",
-      "Smart Slack alerts for hot leads",
+      "AI-driven lead scoring based on intent and fit",
+      "Automatic CRM tagging and ownership assignment",
+      "Smart Slack alerts with lead summaries",
+      "Instant personalized follow-up within minutes",
     ],
-    outcome: "Every lead gets qualified and routed before your team starts their day.",
+    outcome: "Every inbound lead is responded to, prioritized, and handled fast.",
   },
   {
     icon: <Bot className="h-5 w-5 text-purple-600" />,
-    title: "Inbound Reply Automation",
-    goal: "Handle email replies like a seasoned SDR would—faster and smarter.",
+    title: "AI SDR (Sales Development Rep)",
+    goal: "Manage lead replies, handle objections, and book meetings automatically.",
     features: [
-      "AI classifies intent: interested, neutral, or objection",
-      "Generates contextual, human-like responses automatically",
-      "Books meetings directly from email thread",
-      "Auto-updates CRM with conversation data",
+      "Understands inbound replies and context",
+      "Classifies intent (interested / neutral / objection)",
+      "Writes human-like contextual responses",
+      "Books meetings directly from the email thread",
     ],
-    outcome: "Emails answered and meetings booked while you sleep.",
+    outcome: "Zero leads slip through; every opportunity is followed up automatically.",
   },
   {
     icon: <Rocket className="h-5 w-5 text-purple-600" />,
-    title: "Automated Client Onboarding",
-    goal: "Transform onboarding from chaotic to seamless in 4 weeks.",
+    title: "Automated Client Onboarding System",
+    goal: "Replace manual onboarding steps with a seamless automated process.",
     features: [
-      "Auto-creates portal and sends welcome sequences",
-      "Collects all required info without manual chasing",
-      "Notifies team when onboarding is complete",
-      "Reduces back-and-forth emails by 90%",
+      "Auto-creates client portal upon deal closure",
+      "Sends personalized welcome and onboarding instructions",
+      "Collects brand info, access credentials, and contracts",
+      "Notifies internal team when onboarding is complete",
     ],
-    outcome: "Clients feel supported from day one. Your team saves 10+ hours/week.",
+    outcome: "Fast, consistent, and hands-free onboarding for every new client.",
   },
   {
     icon: <PhoneCall className="h-5 w-5 text-purple-600" />,
-    title: "Post-Call Follow-Up & Deal Tracking",
-    goal: "Never let a conversation momentum die.",
+    title: "Post-Call Follow-Up & Deal Tracker",
+    goal: "Automate call summaries, CRM updates, and next-step follow-ups.",
     features: [
-      "AI generates meeting notes and action items automatically",
-      "Updates deal stage in CRM based on conversation",
-      "Sends personalized follow-up emails within minutes",
-      "Surfaces next-step actions for your team",
+      "AI-generated meeting notes and action items",
+      "Auto-updates deal stage in CRM",
+      "Sends personalized follow-up emails right after calls",
     ],
-    outcome: "No manual admin work. Deals move faster because nothing slips through.",
+    outcome: "No manual admin work — calls turn into follow-ups instantly.",
   },
   {
     icon: <LayoutDashboard className="h-5 w-5 text-purple-600" />,
-    title: "Sales Ops Dashboard & ROI Tracking",
-    goal: "See exactly what's working and where to optimize next.",
+    title: "Sales Ops Dashboard",
+    goal: "Give teams a unified, transparent view of the sales pipeline and ROI.",
     features: [
-      "Tracks outreach, replies, meetings, and conversions end-to-end",
-      "Shows automation ROI and time saved in real time",
-      "Identifies top-performing workflows at a glance",
-      "Benchmarks performance month-over-month",
+      "Tracks outreach, replies, meetings, and conversions",
+      "Visualizes performance across campaigns and sources",
+      "Calculates automation ROI and time saved",
+      "Monitors key metrics in real time",
     ],
-    outcome: "Full visibility into pipeline health and automation impact.",
+    outcome: "Full visibility into what’s working — and where to improve.",
+  },
+  {
+    icon: <PhoneCall className="h-5 w-5 text-purple-600" />,
+    title: "AI Voice Receptionist",
+    goal: "Handle inbound calls, qualify leads, and book meetings automatically.",
+    features: [
+      "Conversational AI that greets and qualifies callers",
+      "Lead intent detection and real-time call summaries",
+      "Automatic scheduling and CRM updates",
+    ],
+    outcome: "No missed calls — every lead is answered, qualified, and booked.",
+  },
+  {
+    icon: <MessageSquare className="h-5 w-5 text-purple-600" />,
+    title: "Website Chat-to-Call Agent",
+    goal: "Convert website visitors into live calls and qualified leads.",
+    features: [
+      "Engages visitors through interactive chat",
+      "Qualifies interest and captures lead info",
+      "Books calls directly in your team’s calendar",
+      "Pushes data instantly to CRM",
+    ],
+    outcome: "Turn passive website traffic into real conversations and meetings.",
   },
 ]
 
 export default function WosSection() {
   const Feature = ({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) => (
-    <Card className="border-purple-200/60 bg-white/90 hover:shadow-md transition-shadow">
+    <Card className="border-purple-200/60 bg-white/90">
       <CardHeader className="flex flex-row items-center gap-3 pb-2">
         <div className="flex h-9 w-9 items-center justify-center rounded-md bg-purple-100">{icon}</div>
         <CardTitle className="text-base text-slate-900">{title}</CardTitle>
@@ -116,39 +142,97 @@ export default function WosSection() {
     </Card>
   )
 
+  const Pill = ({ title }: { title: string }) => (
+    <div className="rounded-full border border-purple-200 bg-white px-4 py-2 text-center text-sm font-medium text-slate-700">
+      {title}
+    </div>
+  )
+
+  const Step = ({
+    step,
+    title,
+    desc,
+    time,
+  }: {
+    step: string
+    title: string
+    desc: string
+    time?: string
+  }) => (
+    <div className="rounded-xl border border-slate-200 bg-white p-5 text-left">
+      <div className="text-xs font-semibold text-purple-700">{step}</div>
+      <div className="mt-1 text-base font-semibold text-slate-900">{title}</div>
+      <div className="mt-1 text-sm text-slate-600">{desc}</div>
+      {time ? (
+        <div className="mt-3 inline-flex items-center gap-2 text-xs text-slate-500">
+          <Timer className="h-3.5 w-3.5 text-purple-600" />
+          <span>{time}</span>
+        </div>
+      ) : null}
+    </div>
+  )
+
   const ListItem = ({ children }: { children: React.ReactNode }) => (
     <li className="flex items-start gap-2 text-sm text-slate-700">
-      <CheckCircle2 className="mt-0.5 h-4 w-4 text-purple-600 flex-shrink-0" />
+      <CheckCircle2 className="mt-0.5 h-4 w-4 text-purple-600" />
       <span>{children}</span>
     </li>
   )
 
+  const CaseCard = ({
+    title,
+    before,
+    after,
+  }: {
+    title: string
+    before: string
+    after: string
+  }) => (
+    <Card className="border-slate-200 bg-white/90">
+      <CardHeader>
+        <CardTitle className="text-sm font-semibold text-slate-900">{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div className="rounded-lg border border-slate-200 p-3">
+            <div className="text-xs font-semibold text-slate-500">Before</div>
+            <p className="mt-1 text-sm text-slate-700">{before}</p>
+          </div>
+          <div className="rounded-lg border border-purple-200 bg-purple-50 p-3">
+            <div className="text-xs font-semibold text-purple-700">After</div>
+            <p className="mt-1 text-sm text-purple-900">{after}</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+
   return (
-    <section id="wos" className="relative bg-white py-20 md:py-32">
-      {/* Subtle accent */}
+    <section id="wos" className="relative bg-white py-16 md:py-24">
+      {/* subtle purple bloom */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -top-20 h-32 bg-gradient-to-b from-purple-100/40 to-transparent blur-3xl"
+        className="pointer-events-none absolute inset-x-0 -top-24 h-40 bg-gradient-to-b from-purple-100/70 to-transparent blur-2xl"
       />
-
-      <div className="container mx-auto max-w-7xl px-4 md:px-6 relative z-10">
-        {/* Hero - Compact & Powerful */}
-        <div className="mx-auto max-w-3xl text-center mb-16">
+      <div className="container mx-auto max-w-7xl px-4 md:px-6">
+        {/* Hero */}
+        <div className="mx-auto max-w-3xl text-center">
           <div className="mb-4 flex items-center justify-center gap-3">
-            <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">WOS • @ Ahmezz</Badge>
-            <span className="text-xs text-slate-600">Problem Solver</span>
+            <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100">WOS • @ Ahmezz </Badge>
+            <span className="text-xs text-slate-500">Owner: Taufiq Ahmed</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-4">
-            Sales infrastructure that actually scales
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+            Smarter systems. More clients. Less effort
           </h2>
-          <p className="text-slate-700 text-lg leading-relaxed max-w-2xl mx-auto">
-            Most teams lose deals to slow responses and manual processes. We automate the entire sales engine—from
-            outreach to onboarding—so you close more deals in less time.
+          <p className="mx-auto mt-3 max-w-2xl text-slate-600">
+            {
+              'We’re not an \"AI agency\" we’re problem solvers. We install sales infrastructure from discovery to onboarding using AI wherever it wins. Most workflows are AI‑powered; every decision is outcome‑driven.'
+            }
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Button asChild className="bg-purple-600 text-white hover:bg-purple-700">
-              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
-                Book a Demo
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" aria-label="Book a demo with WOS">
+                Book Demo
               </a>
             </Button>
             <Button
@@ -156,43 +240,96 @@ export default function WosSection() {
               variant="outline"
               className="border-purple-300 text-purple-700 hover:bg-purple-50 bg-transparent"
             >
-              <a href="https://woslive.lovable.app" target="_blank" rel="noopener noreferrer">
-                See Live Workflow
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" aria-label="See a live workflow">
+                See a Live Workflow
               </a>
             </Button>
           </div>
         </div>
 
-        {/* What We Build */}
-        <div className="mt-20 mb-20">
-          <h3 className="text-2xl font-bold text-slate-900 mb-2 text-center">Workflows That Move Deals Forward</h3>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            Each system is custom-built for your workflow and integrated with your existing stack.
+        {/* Problem / Pain Points */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">Common Roadblocks We Remove</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Pill title="Manual follow‑ups" />
+            <Pill title="Data silos" />
+            <Pill title="Slow lead response" />
+            <Pill title="Ops overhead" />
+          </div>
+        </div>
+
+        {/* What We Build (kept intact, copy adjusted to problem-solver tone) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">Workflows We Install</h3>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <Feature
+              icon={<Brain className="h-5 w-5 text-purple-600" />}
+              title="Lead Generation Engine"
+              desc="Outbound systems that find, qualify, and warm up leads — predictable meetings, less manual work."
+            />
+            <Feature
+              icon={<Mail className="h-5 w-5 text-purple-600" />}
+              title="Autonomous Email Follow‑ups"
+              desc="Context‑aware replies and booking that keep deals moving without babysitting threads."
+            />
+            <Feature
+              icon={<PhoneCall className="h-5 w-5 text-purple-600" />}
+              title="Voice Intake & Scheduling"
+              desc="Reception that answers, qualifies, and books — no missed calls, no missed leads."
+            />
+            <Feature
+              icon={<Sparkles className="h-5 w-5 text-purple-600" />}
+              title="Deep Personalization"
+              desc="High‑signal outreach at scale with adaptive follow‑ups and measurable lift."
+            />
+            <Feature
+              icon={<Rocket className="h-5 w-5 text-purple-600" />}
+              title="Onboarding Automation"
+              desc="Hands‑free onboarding from ‘closed won’ to kickoff — consistent and fast."
+            />
+            <Feature
+              icon={<LayoutDashboard className="h-5 w-5 text-purple-600" />}
+              title="Sales Ops Visibility"
+              desc="Dashboards that show pipeline health, ROI, and where to optimize next."
+            />
+          </div>
+        </div>
+
+        {/* NEW: Client-Facing Catalog (from your pasted content) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">
+            Sales Infrastructure Workflows (Client‑Facing Catalog)
+          </h3>
+          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-600">
+            The complete sales operating system for marketing and creative agencies — from outreach to onboarding.
           </p>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {WORKFLOWS.map((wf) => (
-              <Card key={wf.title} className="border-slate-200 bg-white/95 hover:shadow-lg transition-all duration-300">
+              <Card key={wf.title} className="border-slate-200 bg-white/90">
                 <CardHeader className="pb-3">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">{wf.icon}</div>
+                  <div className="flex items-center gap-2">
+                    {wf.icon}
                     <CardTitle className="text-base text-slate-900">{wf.title}</CardTitle>
                   </div>
-                  <p className="text-xs text-purple-700 font-semibold">{wf.goal}</p>
+                  <div className="mt-2 text-xs text-slate-600">
+                    <span className="font-semibold text-slate-700">Goal:</span> {wf.goal}
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    {wf.features.map((f, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-purple-500 mt-0.5 flex-shrink-0" />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="rounded-lg border border-purple-200 bg-purple-50 p-3">
-                    <p className="text-xs font-semibold text-purple-900">
-                      <span className="text-purple-700">→ </span>
-                      {wf.outcome}
-                    </p>
+                  <div className="mb-3">
+                    <div className="mb-1 text-xs font-semibold text-slate-700">Core Features</div>
+                    <ul className="space-y-1.5">
+                      {wf.features.map((f, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 text-purple-600" />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="rounded-md border border-purple-200 bg-purple-50 p-3 text-xs text-purple-900">
+                    <span className="font-semibold">Outcome: </span>
+                    {wf.outcome}
                   </div>
                 </CardContent>
               </Card>
@@ -200,223 +337,208 @@ export default function WosSection() {
           </div>
         </div>
 
-        {/* The Problem & Solution (Subtle Social Proof) */}
-        <div className="mt-20 mb-20 rounded-xl border border-slate-200 bg-gradient-to-r from-slate-50 to-purple-50/20 p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-6">The Reality</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">
-                    <strong>40% of leads</strong> never get a response in the first hour
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">
-                    <strong>Manual follow-ups</strong> consume 6+ hours/week per team member
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">
-                    <strong>Deal pipeline visibility</strong> is fragmented across tools
-                  </span>
-                </li>
+        {/* What You Get — Deliverables, Timeline, Not Included (kept) */}
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          <Card className="border-slate-200">
+            <CardHeader>
+              <CardTitle className="text-base">What You Get</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <ListItem>Built‑for‑you workflows (no DIY)</ListItem>
+                <ListItem>Integration with your CRM, calendar, and comms</ListItem>
+                <ListItem>Custom prompts and routing logic for agents</ListItem>
+                <ListItem>Dashboard for pipeline and performance</ListItem>
+                <ListItem>Support and optimization for 60–90 days</ListItem>
               </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-6">What Changes</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">
-                    <strong>Leads responded to in 5 minutes</strong> automatically
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">
-                    <strong>10+ hours/week saved</strong> on admin work per team member
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">
-                    <strong>Real-time visibility</strong> into every lead and conversation
-                  </span>
-                </li>
+            </CardContent>
+          </Card>
+
+          <Card className="border-slate-200">
+            <CardHeader>
+              <CardTitle className="text-base">Timeline</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <ListItem>Week 1: Discovery, mapping, success metrics</ListItem>
+                <ListItem>Weeks 2–3: Build core workflow + agent</ListItem>
+                <ListItem>Week 4: Pilot launch + tracking</ListItem>
+                <ListItem>Weeks 5–6: Iterate, optimize, handover</ListItem>
               </ul>
-            </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-slate-200">
+            <CardHeader>
+              <CardTitle className="text-base">What’s Not Included</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <ListItem>Buying third‑party tools or seats on your behalf</ListItem>
+                <ListItem>Cold data lists (we’ll integrate your sources)</ListItem>
+                <ListItem>Done‑for‑you copywriting beyond initial flows</ListItem>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* How It Works / Process (kept) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">How It Works</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <Step step="01" title="Discovery" desc="Goals, data, constraints" time="~2 days" />
+            <Step step="02" title="Design" desc="Workflow + agent spec" time="~3 days" />
+            <Step step="03" title="Build" desc="Integrations, routing, QA" time="~1–2 weeks" />
+            <Step step="04" title="Launch" desc="Pilot with tracking" time="~3 days" />
+            <Step step="05" title="Optimize" desc="Iterate on real usage" time="~1–2 weeks" />
           </div>
         </div>
 
-        {/* Who We Work With - Outcomes Focused */}
-        <div className="mt-20 mb-20">
-          <h3 className="text-2xl font-bold text-slate-900 mb-12 text-center">Built for Growth Teams</h3>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                title: "B2B & SaaS Companies",
-                problem: "Losing deals to slow response times",
-                solution: "Scale outreach without hiring SDRs",
-                outcome: "3–5× more qualified demos booked",
-              },
-              {
-                title: "Agencies & Service Firms",
-                problem: "Manual onboarding chaos and follow-ups",
-                solution: "Automate client communication workflows",
-                outcome: "Seamless client experience, 10+ hrs/week saved",
-              },
-              {
-                title: "Consulting & Coaching",
-                problem: "Discovery calls and follow-ups slip through cracks",
-                solution: "Automated discovery call booking and nurturing",
-                outcome: "No missed leads, consistent pipeline fill",
-              },
-            ].map((segment, i) => (
-              <Card key={i} className="border-slate-200 bg-white hover:shadow-md transition-all">
-                <CardHeader>
-                  <CardTitle className="text-base text-slate-900">{segment.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <p className="text-xs font-semibold text-slate-600 uppercase">The Problem</p>
-                    <p className="text-sm text-slate-700 mt-1">{segment.problem}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-slate-600 uppercase">Our Solution</p>
-                    <p className="text-sm text-slate-700 mt-1">{segment.solution}</p>
-                  </div>
-                  <div className="pt-2 border-t border-slate-200">
-                    <p className="text-xs font-semibold text-purple-700 uppercase">Expected Outcome</p>
-                    <p className="text-sm font-semibold text-slate-900 mt-1">{segment.outcome}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+        {/* Use Cases / Vertical Fit (kept) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">Use Cases</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <Target className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">Agencies</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Faster follow‑ups, cleaner pipeline, and clear ROI on outreach and inbound.
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <Users className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">Coaches</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Auto‑qualify, schedule, and nurture — reduce no‑shows and manual chasing.
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <ShieldCheck className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">Consultancies</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Transparent reporting, team dashboards, and reliable handoffs from lead to project.
+              </CardContent>
+            </Card>
           </div>
         </div>
 
-        {/* How It Works - Streamlined */}
-        <div className="mt-20 mb-20">
-          <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Implementation Timeline</h3>
-          <div className="grid gap-4 md:grid-cols-4">
-            {[
-              { step: "Week 1", title: "Discovery", desc: "Map your sales process and priorities" },
-              { step: "Weeks 2-3", title: "Build & Test", desc: "Custom workflows built and tested" },
-              { step: "Week 4", title: "Launch", desc: "Live with team training and support" },
-              { step: "Ongoing", title: "Optimize", desc: "Data-driven improvements and scaling" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-slate-200 bg-white p-6 hover:shadow-md transition-all text-center"
-              >
-                <p className="text-sm font-bold text-purple-600 mb-2">{item.step}</p>
-                <h4 className="font-semibold text-slate-900 mb-1">{item.title}</h4>
-                <p className="text-xs text-slate-600">{item.desc}</p>
-              </div>
-            ))}
+        {/* Proof / Mini Case Stories (kept) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">Proof</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2">
+            <CaseCard
+              title="Creative Agency • Lead Intake"
+              before="Manual email follow‑ups; slow replies; untracked demos"
+              after="3× quicker responses; auto‑booking; 28% lift in qualified demos in 60 days"
+            />
+            <CaseCard
+              title="Performance Agency • Onboarding"
+              before="Fragmented forms; unclear status; repeat questions"
+              after="Unified onboarding; 10+ hours/week saved; fewer back‑and‑forth emails"
+            />
           </div>
-        </div>
-
-        {/* Why Choose WOS */}
-        <div className="mt-20 mb-20 rounded-xl border border-slate-200 bg-gradient-to-br from-purple-50/30 to-white p-8">
-          <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Why WOS</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex gap-4">
-              <Brain className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Problem-First Approach</h4>
-                <p className="text-sm text-slate-600">
-                  We don't sell tools. We solve your specific sales bottleneck with workflows that fit your business.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <TrendingUp className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Transparent ROI Tracking</h4>
-                <p className="text-sm text-slate-600">
-                  See exactly how much time and money you're saving. We track every metric that matters.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <Users className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Done-For-You Service</h4>
-                <p className="text-sm text-slate-600">
-                  We build, deploy, manage, and optimize. You just focus on closing deals.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <ShieldCheck className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Built for Your Stack</h4>
-                <p className="text-sm text-slate-600">
-                  Seamless integration with your existing CRM, calendar, and communication tools.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ - Addressing Objections Subtly */}
-        <div className="mt-20 mb-20">
-          <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Common Questions</h3>
-          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-            {[
-              {
-                q: "How quickly will we see results?",
-                a: "Most teams see 3× faster lead responses within week 1. Full ROI typically appears by week 4.",
-              },
-              {
-                q: "Will this actually fit our workflow?",
-                a: "Yes. We map your exact process and build custom workflows. You're not forcing your business into a tool.",
-              },
-              {
-                q: "What if something breaks?",
-                a: "We manage the entire system. Human escalation protocols ensure nothing slips through.",
-              },
-              {
-                q: "Can we cancel anytime?",
-                a: "You can, but most teams stay for 18+ months because the ROI becomes obvious quickly.",
-              },
-            ].map((item, i) => (
-              <Card key={i} className="border-slate-200 bg-white">
-                <CardHeader>
-                  <CardTitle className="text-base text-slate-900">{item.q}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-slate-600">{item.a}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Final CTA */}
-        <div className="rounded-xl border border-purple-200 bg-gradient-to-r from-purple-50 to-purple-50/50 p-8 md:p-12 text-center">
-          <h3 className="text-2xl font-bold text-slate-900 mb-3">Ready to automate your sales engine?</h3>
-          <p className="text-slate-700 mb-8 max-w-2xl mx-auto">
-            Let's talk about your current bottlenecks and where WOS can create the most impact.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button asChild className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-6 rounded-lg">
-              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer">
-                Book a 30-Min Call
-              </a>
-            </Button>
+          <div className="mt-6 flex justify-center">
             <Button
               asChild
               variant="outline"
-              className="border-purple-300 text-purple-700 hover:bg-purple-50 px-8 py-6 rounded-lg bg-transparent"
+              className="border-purple-300 text-purple-700 hover:bg-purple-50 bg-transparent"
             >
-              <a href="https://woslive.lovable.app" target="_blank" rel="noopener noreferrer">
-                See Live Workflows
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" aria-label="Ask for case studies">
+                Ask for a Case Study
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* Why WOS / Why Ahmezz (kept) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">Why WOS</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Pill title="Problem‑first" />
+            <Pill title="Workflow‑led" />
+            <Pill title="ROI‑driven" />
+            <Pill title="Transparent Reporting" />
+          </div>
+        </div>
+
+        {/* Packages / Pricing (kept) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">Packages</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-3">
+            <Card className="border-slate-200">
+              <CardHeader>
+                <CardTitle className="text-base">Pilot</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                One workflow + basic dashboard. Ideal to validate quickly. Starting at $X.
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200">
+              <CardHeader>
+                <CardTitle className="text-base">Growth</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Multi‑workflow system + optimization. Best for scaling teams. Starting at $X.
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200">
+              <CardHeader>
+                <CardTitle className="text-base">Enterprise</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                Custom stack + reporting + advanced automations. Quote on request.
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-6 flex justify-center">
+            <Button asChild className="bg-purple-600 text-white hover:bg-purple-700">
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" aria-label="Get a custom proposal">
+                Get a Custom Proposal
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* FAQ (kept) */}
+        <div className="mt-16">
+          <h3 className="text-center text-xl font-semibold text-slate-900">FAQ</h3>
+          <div className="mx-auto mt-6 grid max-w-5xl gap-4 sm:grid-cols-2">
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <HelpCircle className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">Are you an AI agency?</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                No. We’re a problem‑solving partner. We install sales infrastructure and use AI only where it gives you
+                speed and reliability.
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <HelpCircle className="h-5 w-5 text-purple-600" />
+                <CardTitle className="text-base">Do you build it or do we?</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-slate-600">
+                We build it for you end‑to‑end. You get docs, training, and optimization support post‑launch.
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Bottom CTA (kept) */}
+        <div className="mt-16 rounded-xl border border-purple-200 bg-purple-50 p-6 text-center">
+          <h4 className="text-lg font-semibold text-purple-900">Let’s build your engine</h4>
+          <p className="mt-1 text-sm text-purple-800">Quick intro call. 30 minutes. Actionable next steps.</p>
+          <div className="mt-4">
+            <Button asChild className="bg-purple-600 text-white hover:bg-purple-700">
+              <a href={CTA_LINK} target="_blank" rel="noopener noreferrer" aria-label="Book a 30 minute call">
+                Book a 30‑min Call
               </a>
             </Button>
           </div>

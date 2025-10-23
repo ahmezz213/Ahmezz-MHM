@@ -4,14 +4,10 @@ import AhmezzTeamSection from "@/components/ahmezz-team-section"
 import MhmSection from "@/components/mhm-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
-import AhmezzSpotlight from "@/components/ahmezz-spotlight"
 
 export default function Page() {
   return (
     <main className="min-h-screen w-full overflow-x-hidden">
-      {/* Spotlight component */}
-      <AhmezzSpotlight />
-
       {/* Top dynamic names strip - white background */}
       <AgencyTicker />
 
