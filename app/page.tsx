@@ -1,32 +1,31 @@
-import AgencyTicker from "@/components/agency-ticker"
-import WosSection from "@/components/wos-section"
+"use client"
+
+import HeroSection from "@/components/hero-section"
+import WorkflowSection from "@/components/workflow-section"
+import ServicesSection from "@/components/services-section"
+import WOSSection from "@/components/wos-section"
+import MHMSection from "@/components/mhm-section"
+import SubsidiariesSection from "@/components/subsidiaries-section"
+import AgenciesSection from "@/components/agencies-section"
 import AhmezzTeamSection from "@/components/ahmezz-team-section"
-import MhmSection from "@/components/mhm-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
+import AhmezzSpotlight from "@/components/ahmezz-spotlight"
 
-export default function Page() {
+export default function Home() {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden">
-      {/* Top dynamic names strip - white background */}
-      <AgencyTicker />
-
-      {/* WOS: white + purple themed section with full conversion flow */}
-      <WosSection />
-
-      {/* Subtle team section */}
+    <main className="w-full">
+      <HeroSection />
+      <WorkflowSection />
+      <ServicesSection />
+      <WOSSection />
+      <MHMSection />
+      <SubsidiariesSection />
+      <AgenciesSection />
       <AhmezzTeamSection />
-
-      {/* MHM on dark canvas so WOS doesn't look odd */}
-      <section id="mhm" className="bg-black text-white">
-        <MhmSection />
-      </section>
-
-      {/* Contact + Footer */}
-      <section id="contact" className="bg-black text-white">
-        <ContactSection />
-      </section>
+      <ContactSection />
       <Footer />
+      <AhmezzSpotlight />
     </main>
   )
 }
