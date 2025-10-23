@@ -31,18 +31,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.remove('dark')
+              } else {
+                document.documentElement.classList.add('dark')
+              }
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.className} bg-background text-foreground`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true} disableTransitionOnChange>
           {children}
         </ThemeProvider>
 
-        {/* Basic analytics bootstrap */}
         <Script id="bootstrap-datalayer" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];`}
         </Script>
 
-        {/* JSON-LD Schema: AI Automation Agency (WOS) */}
         <Script id="schema-wos" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -26,6 +26,28 @@
     --radius: 0.5rem;
   }
 
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 263.4 70% 50.4%;
+  }
+
   .light {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -53,8 +75,11 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 
   html {
@@ -118,12 +143,10 @@
   --tw-prose-td-borders: rgba(255, 255, 255, 0.2);
 }
 
-/* Custom grid pattern for background */
 :root {
   --grid-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Animation utilities */
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 15s ease infinite;
@@ -157,7 +180,6 @@
   }
 }
 
-/* Enhanced glow effects */
 .glow-text {
   text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
 }
